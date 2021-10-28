@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>italiano</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+<!-- ICONCA AWESOME -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+<%- include('./header/header.ejs'); -%>
+<% var collection%>
+<% var chegirma%> 
+<% var customer%> 
+<% var product1%>
+<% var product2%>
+<% var user%>
+        <main>
+                <div class="containers">
+                <div class="line_text">  <h1><%= collection[0].name.uz%> Collection</h1>
+            <p><%= collection[0].title.uz%></p>
+            <a href="/collection/<%= collection[0]._id%>" style="text-decoration: none;"> <button style="cursor: pointer;"> Batafsil <i class="fas fa-arrow-right"></i></button></a>
+        </div>
+    </div>
+        <div class="line__gradient">  </div>
+        </main>
+    
+    </header>
+
+  
+    <!-- SECTION OSHXONA -->
+
+    <section class="farniture">
+    <div class="containers">
+        <div class="big_box">
+        <div class="box"><h1>800+</h1><span>Mijozlar</span></div>
+        <div class="box"><h1>5 yil+</h1><span>Tajriba</span></div>
+        <div class="box"><h1>1000+</h1><span>Maxsulot</span></div>
+    </div>
+    <div class="carusel">
+    <div class="carusel_texts">
+         <div class="carusel_text">
+             <h1><%= product1[0].categoryID.name.uz%></h1>
+        <p>Furniture design</p>
+    </div>
+        <div class="carusel_text tect_icons"><i class="fas fa-angle-left"></i> <i class="fas fa-angle-right"></i></div>
+    </div>
+    
+        
+        <div class="carusel_show">
+            <% for(item of product1) {%>
+            <div class="box_carusel">
+                <a href="/product/<%= item._id%>" style="cursor: pointer;"><img  src="<%= item.poster.min%>" alt=""></a>
+                <div class="containers"> 
+                      <div class="icon_box">
+                        <div class="icon"><i class="fas fa-share-alt"calss="showme"></i></div>
+                        <div class="icon"><a href="/product/<%= item._id%>" style="color: #C0C0C0;"><i class="far fa-eye"></i></a></div>
+                        <div class="icon"><a href="/api/basket/<%= item._id%>" style="color: #C0C0C0;"><i class="fas fa-briefcase"></i></a></div>
+                    </div>
+                <span><a href="/product/<%= item._id%>" style="cursor: pointer; color: #8D8D8D;"><%=item.name.uz%></a></span><br>
+                <b><a href="/product/<%= item._id%>" style="cursor: pointer; color: rgb(30,39,37);"><%= item.price%> so‘m </a></b>
+            </div>
+                 
+            </div>
+           <% }%>
+
+        </div>
+       
+    </div>
+    </div>
+    
+    </section>
+
+    <!-- CARUSELL IMAGE ........................ -->
+
+
+      <!-- SECTION DISCOUNT -->
+
+    <section class="discount">
+        <div class="containers">
+        <div class="discount_cont">
+        <div class="discount_box dicount_border">
+         <h1>CHEGIRMA</h1>
+         <p><a href="/product/<%= chegirma[0].productID._id%>" style="cursor: pointer; color: rgb(30,39,37)"><%= chegirma[0].productID.name.uz%></a></p>
+         <h2><%= (chegirma[0].count/chegirma[0].productID.price)*100%><sub>off</sub><sup>%</sup></h2>
+        </div>
+        <div class="discount_box">
+           <a href="/product/<%= chegirma[0].productID._id%>"><img src="<%=chegirma[0].productID.images[0].url%>" alt=""></a> 
+        </div>
+        </div>
+        <a href="/product/<%= chegirma[0].productID._id%>"> <button style="cursor: pointer; margin-top: 20px;"> Batafsil <i class="fas fa-arrow-right"></i></button></a> 
+    </div>
+    </section> 
+
+    <!-- SECTION ABOUT -->
+
+         <section class="about" style="margin-top: 20px;">
+        <div class="containers">
+        <h1>Biz haqimizda</h1>
+        <p><%= about[0].title.uz%> <span class="paragrf"> text, this is simply copy that serves to fill a space without actually saying anything meaningful.</span></p>
+        <div class="about_video">
+            <img src="<%= about[0].image%>" alt="">
+        </div>
+        <h1>Bizning mijozlarimiz</h1>
+        <div class="marca">
+            <%for(item of customer){%>
+                <img src="/public/uploads/image/<%= item.image%>" alt="">
+            <% }%>
+        </div>
+        <div class="carusel">
+            <div class="carusel_texts">
+                 <div class="carusel_text text2">
+                     <h1><%= product2[0].categoryID.name.uz%></h1>
+                <h3>Furniture design</h3>
+            </div>
+                <div class="carusel_text tect_icons right"><i class="fas fa-angle-left"></i> <i class="fas fa-angle-right"></i></div>
+            </div>
+
+                 <div class="carusel_show owl_carusel">
+                     <%for(item of product2) {%>
+                        <div class="box_carusel">
+                            <a href="/product/<%= item._id%>" style="cursor: pointer;"><img  src="<%= item.poster.min%>" alt=""></a>
+                            <div class="containers"> 
+                                  <div class="icon_box">
+                                    <div class="icon"><i class="fas fa-share-alt"calss="showme"></i></div>
+                                    <div class="icon"><a href="/product/<%= item._id%>" style="color: #C0C0C0;"><i class="far fa-eye"></i></a></div>
+                                    <div class="icon"><a href="/api/basket/<%= item._id%>" style="color: #C0C0C0;"><i class="fas fa-briefcase"></i></a></div>
+                                </div>
+                            <span><a href="/product/<%= item._id%>" style="cursor: pointer; color: #8D8D8D;"><%=item.name.uz%></a></span><br>
+                            <b><a href="/product/<%= item._id%>" style="cursor: pointer; color: rgb(30,39,37);"><%= item.price%> so‘m </a></b>
+                        </div>
+                             
+                        </div>
+        
+                    <% }%>
+                </div>              
+            </div>
+    </div>
+    </section> 
+
+    <!--MEDIA SECTION  -->
+
+      <section class="media">
+         <div class="media_texts">
+        <h1>Bizni ijtimoiy tarmoqlarda kuzating</h1>
+        <p>Aksiya va chegirmalardan xabardor bo’lish uchun ijtimoiy tarmoqlardagi sahifalarimizga a’zo bo’ling</p>
+    </div>
+        <div class="media_icons">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-telegram"></i></a>
+            <a href=""><img src="./Img/Vector (1).svg" alt=""></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>  
+
+
+    <section class="help">
+            <div class="containers">
+                <h1>Nega bizni tanlashadi?</h1>
+                <div class="help_item">
+                    <div class="help_box">
+                        <img src="./Img/fast 1.jpg" alt="">
+                        <div class="help_text">
+                        <h2>Bepul yetkazib berish</h2>
+                        <p>Bepul yetkazish faqat Samarqand shahri hududida amalga oshiriladi</p>
+                    </div>
+                    </div>
+                    <div class="help_box">
+                        <img src="./Img/naushnik.jpg" alt="">
+                       <div class="help_text"><h2>Qo‘llab quvvatlash </h2>
+                    <p>Buyurtma qoldirilgan vaqtdan boshlab 24 soat ichida siz bilan aloqaga chiqamiz</p>
+                </div> 
+                    </div>
+                    <div class="help_box">
+                        <img src="./Img/time 1.jpg" alt="">
+                        <div class="help_text">
+                    <h2>Tezkor xizmat</h2>
+                    <p>15 kundan keyingi har bir kun uchun 1% pulingizni qaytarib beramiz</p>
+                </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="start_work">
+                <h1>Ishni boshlaymizmi?</h1>
+                <p>Mazkur formani to’ldiring va operatorimiz siz bilan 24 soat ichida bog‘lanadi.</p>
+            </div>
+            <form action="/api/contact" method="POST">
+                <div class="forms">
+                <div class="form_item">
+                    <label for="">Ismingiz</label><br>
+                    <input type="text"  placeholder="Fullname" name="fullname" required><br><br>
+                    <label for="">Telefon raqam <span>*</span></label><br>
+                    <input type="number"placeholder="99 _ _ _" name="phone" required> 
+                    <button class="btn" style="cursor: pointer;">Jo‘natish <img src="./Img/button.png" alt="" ></button>
+                </div>
+                <div class="form_item kids_img">
+                    <img src="./Img/Cool Kids - High Tech 1.png" alt="">
+                </form></div>
+                </div>
+        </div> 
+        </section> 
+       
+        
+        <!-- FOOTER SECTION -->
+
+    
+<%- include('./footer/footer.ejs'); -%>
+   
+</div>
+ <script src="./js/script.js"></script>
+
+ <script src="./js/index.js"></script>
+</body>
+</html>
+
+<!-- Uchqun Turdiev 2021 09 05 -->

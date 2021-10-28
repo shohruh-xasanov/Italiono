@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biz haqimizda</title>
+    <link rel="stylesheet" href="/about/css/style3.css">
+    <link rel="stylesheet" href="/about/css/main3.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Style The Dropdown Button */
+        .dropbtn {
+          margin-top: 0;
+          font-size: 16px;
+          background-color: #1E2725;
+          color: white;
+          border: none;
+          cursor: pointer;
+          width: 50px;
+        }
+        
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: rgb(255,255,255);
+          z-index: 1;
+          border-radius: 10px;
+        }
+        
+        /* Links inside the dropdown */
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;    
+          font-size: 16px;
+          font-family: 'Lato', sans-serif;
+          font-weight: bold;
+          
+        }
+        
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+          background-color: #1E2725;
+          color: #fff;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="head_firs">
+            <div class="hed_nambe">    <i class="fas fa-phone-alt"></i><a href="tel:+99871 - 123-45-67">+99871 - 123-45-67</a></div>
+        
+          <div class="hed_lang">  <img src="../Img/2560px-Flag_of_Uzbekistan.svg.png" alt="bu erda rasm bor">
+            <div class="dropdown">
+                <button class="dropbtn">Ru</button>
+                <div class="dropdown-content">
+                <a href="/uz/changelang">Uz</a>
+                </div>
+            </div>  
+            <%if(user){%>
+                <p style="padding-top: 0;"><%= user.name%> <a href="/logout" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181); padding-left: 5px;"> Logout</a></p>
+                <%}else{%>
+                  <p style="padding-top: 0;"><a href="/api/login" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181); ">Login</a></p>
+                  <% }%>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+        <div class="container">
+        <nav>
+            <div class="bars">
+               <img src="../Img/Vector (2).svg" alt="">
+            </div> 
+            <img src="../Img/ITALIANO.png" alt=""class="italiano_img">
+            <ul>
+                <ul>
+                    <i class="fas fa-times"></i>
+                <li><a href="/ru">Главная</a></li>
+                <li><a href="/ru/catalog">Каталог</a></li>
+                <li><a href="/ru/about">О сайте</a></li>
+                <li><a href="#">Контакты </a></li>
+                <div class="media_icon">
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-telegram"></i></a>
+                <a href=""><img src="../Img/Vector (1).svg" alt=""></a>
+            </div>
+            </ul>
+        </ul>
+            <div class="corzina">
+            <b>x</b>
+            <form action="/ru/search" class="app-search">
+                <input name="name" type="search" placeholder="matn kiriting" autocomplete="off" />
+                <i class="fas fa-search"></i>
+                <button style="display: none;" type="submit"></button>
+            </form>
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+            
+        </nav>
+    </div>
+    </div>
+
+    </header>
+
+    <section class="about_me">
+        <div class="container">
+            <div class="links">
+        <div class="link">
+        <a href="/ru">Главная/ </a>
+        <a href="/ru/about"><span>О сайте</span> </a>
+        <h3>Кто мы?</h3>
+        <%if(about[0]){%>
+        <p><%= about[0].title.uz%></p>
+        <div class="about_video">
+            <img src="<%= about[0].image%>" alt="">
+        </div>
+        <% }%>
+        <div class="title_text">
+       <h2>Наша команда</h2>
+       <div class="carusel_text tect_icons right"><i class="fas fa-angle-left"></i> <i class="fas fa-angle-right"></i></div>
+       <div class="title_img">
+           <%for(item of master){%>
+            <div class="title">
+                <img src="<%= item.image%>" alt="">
+                <div class="title_ower"><a href="">a</a><a href="">b</a><a href="">c</a></div>
+                <div class="title_pr">
+                        <h3><%= item.name%></h3>
+                        <p><%= item.job%></p>
+                </div>
+            
+            </div>
+            <% }%>
+       </div>
+    </div>
+    
+        </div>
+    </section>
+
+      <!-- MODAL...................... -->
+      <div class="modal" >
+        <div class="modal_bottom" style="height: 450px;">
+           
+          <%if(user){%>
+            <%if(basket[0]){%>
+              <div class="modal_box" >
+              <img src="<%= basket[0].productID.poster.min%>" alt="">
+              <div class="modal_text" >
+                  <b>x</b>
+              <p><%= basket[0].productID.name.uz%></p>
+              <h3><%= basket[0].productID.price%> so'm</h3>
+              <span>new</span>
+              </div>
+              </div>
+              <%} else{%> 
+                <div class="modal_text" >
+                  <p style="display: inline-block; padding-top: 20px; font-size: larger">В настоящее время в корзине нет данных</p>
+                  <b>x</b>
+              </div>
+              <a href="/api/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Ходить по магазинам <img src="./Img/button.png" alt=""></button></a>
+              </div>
+                <% }%>
+              <%if(basket[1]) {%>
+              <div class="modal_box" >
+                  <i class="fas fa-times" class="exit">x</i>
+                  <img src="<%= basket[1].productID.poster.min%>" alt="">
+                  <div class="modal_text">
+                  <p><%= basket[1].productID.name.ru%></p>
+                  <h3><%= basket[1].productID.price%> so'm</h3>
+                  <span>new</span>
+                  </div>
+                  </div>
+                  <% }%>
+                  <%if(basket[2]) {%>
+                    <div class="modal_box" >
+                        <i class="fas fa-times" class="exit">x</i>
+                        <img src="<%= basket[2].productID.poster.min%>" alt="">
+                        <div class="modal_text">
+                        <p><%= basket[2].productID.name.ru%></p>
+                        <h3><%= basket[2].productID.price%> so'm</h3>
+                        <span>new</span>
+                        </div>
+                        </div>
+                        <% }%>
+                        <%if(basket[0]) {%>
+                  <a href="/api/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Ходить по магазинам <img src="./Img/button.png" alt=""></button></a>
+                        <% }%>
+                        <% }else{%>
+                          <div class="modal_text" >
+                            <p style="display: inline-block; padding-top: 20px; font-size: larger">Вы не зарегистрированы на Сайте</p>
+                            <b>x</b>
+                        </div>
+                        <a href="/api/login" style="text-decoration: none;"><button>Войти на сайт<img src="/Img/button.png" alt=""></button></a>
+                        <% }%>
+                </div>
+        </div>
+    </div>
+
+
+    <section class="media">
+            <div class="media_texts">
+                <h1>Следуйте за нами в социальных сетях</h1>
+                <p>Подпишитесь на наши страницы в социальных сетях, чтобы быть в курсе акций и скидок.</p>
+            </div>
+                <div class="media_icons">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-telegram"></i></a>
+                    <a href=""><img src="../Img/Vector (1).svg" alt=""></a>
+                    <a href=""><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+    </section>
+
+    <section class="my_work">
+        <div class="container">
+        <h1>Наша мастерская</h1>
+        <a href="">все</a>
+        <div class="my_work_img">
+            <div class="img_item">
+                <img src="<%= gallery[0].image%>" alt="">
+            </div>
+            <div class="img_item img_item_right">
+                <div class="work_img">
+                    <%if(gallery[1]) {%>
+                    <img src="<%= gallery[1].image%>" alt="">
+                    <%}%>
+                </div>
+                <div class="work_img work_img_bottom">
+                    <%if(gallery[2]) {%>
+                    <img src="<%= gallery[2].image%>" alt="">
+                    <% }%>
+                    <%if(gallery[3]) {%>
+                    <img src="<%= gallery[3].image%>" alt="">
+                    <% }%>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- START WORK -->
+
+<div class="start_work">
+    <h1>Может начнем?</h1>
+    <p>Заполните эту форму, и наш оператор свяжется с вами в течение 24 часов.</p>
+</div>
+<form action="/api/contact" method="POST">
+    <div class="forms">
+    <div class="form_item">
+        <label for="">Ваше имя</label><br>
+        <input type="text"placeholder="Fullname" name="fullname" required> <br><br>
+        <label for="">Номер телефона<span>*</span></label><br>
+        <input type="number"placeholder="99 _ _ _" name="phone" required> 
+        <button style="cursor: pointer;" class="btn">послать<img src="../Img/button.png" alt=""></button>
+    </div>
+    <div class="form_item kids_img">
+        <img src="../Img/Cool Kids - High Tech 1.png" alt="">
+    </form></div>
+    </div>
+</div> 
+</section> 
+
+    
+<!-- FOOTER SECTION -->
+<footer>
+      
+    <div class="foot_scroll">
+        <a href="#"><img src="../Img/Scroll.png" alt=""></a>
+    </div>
+      
+    <div class="container">
+    
+         <div class="footer_item">
+             <div class="foot_text"> 
+                <h1>О компании</h1>                   
+                 <h4><i class="fas fa-envelope-open"></i>Самарканд, Ветряной сад 18 дом</h4>
+            <h4><i class="fas fa-phone-alt"></i><a href="tel:+9987-123-45-67">+9987-123-45-67</a> </h4>
+            <h4><i class="fas fa-envelope"></i><a href="https://italiano@gmail.com">italiano@gmail.com</a></h4>
+              </div>
+             <div class="foot_text foot_center">  
+                <h1>Информация</h1>             
+                <h4>O нас</h4>
+                <h4>Коммуникация</h4> 
+             </div> 
+
+              <div class="foot_text foot_right">
+                <h1>Социальные сети</h1>
+                <h4><a href=""><i class="fab fa-facebook"></i> Facebook</a> </h4>
+                <h4><a href=""><i class="fab fa-instagram"></i></i> Instagram</a></h4> 
+                <h4><a href=""><i class="fab fa-telegram"></i> Telegram</a></h4>
+             </div>
+         </div>
+        
+     </div>
+     </div>
+    <div class="foot_img"> <img src="../Img/footer.jpg" alt=""></div>
+ </footer>  
+ 
+  <div class="foot_bottom">
+     <h3>Copyright  &copy;  2016 <span> Italiano. </span> <b> Все права защищены.</b></h3>
+ </div> 
+
+<script src="/about/js/index.js">
+    
+</script>
+</body>
+</html>
+
+<!-- Uchqun Turdiev 2021 09 05 -->

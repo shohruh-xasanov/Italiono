@@ -1,0 +1,69 @@
+<% var users%>
+<% var news%>
+<% var month%>
+<% var week%>
+<% var day%>
+<% var monthvisit%>
+<% var weekvisit%>
+<% var dayvisit%>
+<div class="page-title-box">
+    <div class="row align-items-center">
+        <div class="col-sm-6">
+            <h4 class="page-title">Dashboard</h4>
+        </div>
+        <div class="col-sm-6">
+            <ol class="breadcrumb float-right">
+                <li class="breadcrumb-item"><a href="javascript:void(0);">Stexo</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+        </div>
+    </div>
+    <!-- end row -->
+</div>
+<!-- end page-title -->
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card m-b-30">
+            <div class="card-body">
+                <h4 class="mt-0 header-title mb-4">Adminlar Ro'yhati</h4>
+                <div class="table-responsive">
+                    <table class="table table-hover" >
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col" >Edit</th>
+                                <th scope="col" >Delete</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%for(item of users) {%>
+                            <tr>
+                                <td>
+                                    <%= item.fullname%>
+                                </td>
+                                <td>
+                                <div>
+                                    <a href="/api/user/search/<%= item._id%>" class="btn btn-outline-info waves-effect waves-light">Edit</a>
+                                </div>
+                                </td>
+                                <td>
+                                <div>
+                                    <form action="<%=`/api/user/search/${item._id}?_method=DELETE`%>" method="POST"
+                                        class="btn btn-outline-danger waves-effect waves-light" >
+                                        <button style="margin:0;padding: 0; border: 0; border-radius: 5px; background:none; color: #FC5454;">
+                                           Delete
+                                        </button>
+                                    </form>
+                                </div>
+                                </td>
+                            </tr>
+                            <% }%>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END ROW -->

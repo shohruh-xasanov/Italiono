@@ -1,0 +1,82 @@
+<% var color %>
+<% var size %>
+  <div class="row">
+  <div class="col-12">
+    <div style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      ">
+      <h4 class="m-3" style="font-weight: 700">Buyurtmalar ro'yhati</h4>
+    </div>
+ 
+
+    <div class="card col-md-12 table-responsive">
+      <div class="card-body table-responsive">
+        <table
+          id="datatable"
+          class="table table-bordered text-center "
+          style="border-collapse: collapse; border-spacing: 0; width: 150%; flex-wrap: wrap;"
+        >
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Phone</th>
+              <th>Manzili</th>
+              <th>Umumiy So'mma</th>
+              <th>Mahsulot Nomi</th>
+              <th>Vaqti</th>
+              <th style="width: 5%">Sozlamalar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(let item of order) {%>
+              <tr>
+                <td>
+                  <img src="<%= item.productID.poster.min%>" alt="" style="width: 100px;height: 80px;">
+                </td>
+                <td>
+                  +<%= item.phone%>
+                </td>
+                <td>
+                  <%= item.address %>
+                </td>
+                <td>
+                  <%= item.productID.price %> so'm
+                </td>
+                <td>
+                  <%if(item.productID.name.uz){%>
+                    <%= item.productID.name.uz%>
+                    <% }%>
+                    <%if(item.productID.name.ru){%>
+                      <%= item.productID.name.ru%>
+                      <% }%>
+                </td>
+                <td>
+                  <%= moment(item.createdAt).format("DD-MM-YYYY") %>
+                </td>
+                <td style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-around;
+                  align-items: center;
+                ">
+                  <br>
+                  <form method="POST" class="hidden-r" action="<%=`/api/order/delete/${item._id}?_method=DELETE`%>">
+                    <button type="submit" class="btn btn-danger">
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </form>
+                </td>
+              </tr>
+              <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- end col -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>

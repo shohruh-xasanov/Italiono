@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>magazin saiti</title>
+    <link rel="stylesheet" href="/singlepage2/css/style2.css">
+    <link rel="stylesheet" href="/singlepage2/css/main2.css">
+    <style>
+        .action a 
+        {
+            background-color: #fff;
+        }
+        .action a:hover 
+        {
+            background-color: #FF2020;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <style>
+        /* Style The Dropdown Button */
+        .dropbtn {
+          margin-top: 0;
+          font-size: 16px;
+          background-color: #1E2725;
+          color: white;
+          border: none;
+          cursor: pointer;
+          width: 50px;
+        }
+        
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: rgb(255,255,255);
+          z-index: 1;
+          border-radius: 10px;
+        }
+        
+        /* Links inside the dropdown */
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;    
+          font-size: 16px;
+          font-family: 'Lato', sans-serif;
+          font-weight: bold;
+          
+        }
+        
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+          background-color: #1E2725;
+          color: #fff;
+        }
+         .italiano 
+        {
+            padding-left: 90px;
+        }
+        .corzina
+        {
+            padding-right: 50px;
+        }
+        </style>
+    
+    <%var product%>
+    <%var search%>
+    <div class="hed">
+        <header>
+           
+            <div class="head_firs">
+                <div class="hed_nambe">    <i class="fas fa-phone-alt"></i><a href="tel:+99871 - 123-45-67">+99871 - 123-45-67</a></div>
+            
+              <div class="hed_lang" style="margin-right: -20px;">  <img src="/Img/2560px-Flag_of_Uzbekistan.svg.png" alt="bu erda rasm bor">
+                <div class="dropdown">
+                    <button class="dropbtn">Uz</button>
+                    <div class="dropdown-content">
+                    <a href="/ru/changelang">Ru</a>
+                    </div>
+                </div>
+                <%if(user){%>
+                <p style="padding-top: 0;"><%= user.name%> <a href="/logout" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181); padding-left: 5px;"> Logout</a></p>
+                <%}else{%>
+                  <p style="padding-top: 0;"><a href="/api/login" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181); ">Login</a></p>
+                  <% }%>
+                </div>
+            </div>
+            <div class="navigation">
+            <div class="containers">
+            <nav>
+               <div class="bars"><img src="/Img/Vector (2).svg" alt=""></div> 
+                <img class="italiano" src="/Img/ITALIANO.png" alt="">
+                <ul>
+                    <li><a href="/">Bosh sahifa</a></li>
+                    <li><a href="/catalog">Katalog</a></li>
+                    <li><a href="/about">Biz haqimizda</a></li>
+                    <li><a href="#">Aloqa </a></li>
+                    <ul>
+                        <i class="fas fa-times"></i>
+                        <h4><a href=""><i class="fab fa-facebook"></i></a> </h4>
+                        <h4><a href=""><i class="fab fa-instagram"></i></i> </a></h4> 
+                        <h4><a href=""><i class="fab fa-telegram"></i></a></h4>
+                    </ul>
+                </ul>
+                <div class="corzina">
+                    <b>x</b>
+                    <form action="/search" class="app-search">
+                    <input name="name" type="search" placeholder="matn kiriting" autocomplete="off" />
+                    <i class="fas fa-search"></i>
+                    <button style="display: none;" type="submit"></button>
+                </form>
+                <i class="fas fa-shopping-bag" style="cursor: pointer;"></i>
+                </div>
+               
+            </nav>
+        </div>
+        </div>
+    
+        <!-- MODAL...................... -->
+    
+        <div class="modal" >
+            <div class="modal_bottom" style="height: 450px;">
+              <%if(user){%>
+              <%if(basket[0]){%>
+                <div class="modal_box" >
+                <img src="<%= basket[0].productID.poster.min%>" alt="">
+                <div class="modal_text" >
+                    <b>x</b>
+                <p><%= basket[0].productID.name.uz%></p>
+                <h3><%= basket[0].productID.price%> so'm</h3>
+                <span>new</span>
+                </div>
+                </div>
+                <%} else{%> 
+                  <div class="modal_text" >
+                    <p style="display: inline-block; padding-top: 20px; font-size: larger">Savatda hozirda malumotlar yo'q</p>
+                    <b>x</b>
+                </div>
+                <a href="/api/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Savatga o'tish <img src="./Img/button.png" alt=""></button></a>
+                </div>
+                  <% }%>
+                <%if(basket[1]) {%>
+                <div class="modal_box" >
+                    <i class="fas fa-times" class="exit">x</i>
+                    <img src="<%= basket[1].productID.poster.min%>" alt="">
+                    <div class="modal_text">
+                    <p><%= basket[1].productID.name.uz%></p>
+                    <h3><%= basket[1].productID.price%> so'm</h3>
+                    <span>new</span>
+                    </div>
+                    </div>
+                    <% }%>
+                    <%if(basket[2]) {%>
+                      <div class="modal_box" >
+                          <i class="fas fa-times" class="exit">x</i>
+                          <img src="<%= basket[2].productID.poster.min%>" alt="">
+                          <div class="modal_text">
+                          <p><%= basket[2].productID.name.uz%></p>
+                          <h3><%= basket[2].productID.price%> so'm</h3>
+                          <span>new</span>
+                          </div>
+                          </div>
+                          <% }%>
+                          <%if(basket[0]) {%>
+                    <a href="/api/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Savatga o'tish <img src="./Img/button.png" alt=""></button></a>
+                          <% }%>
+                          <% }else{%>
+                            <div class="modal_text" >
+                              <p style="display: inline-block; padding-top: 20px; font-size: larger">Siz Saytdan Ruyhatdan o'tmagansiz</p>
+                              <b>x</b>
+                          </div>
+                          <a href="/api/login" style="text-decoration: none;"><button>Saytga kirish <img src="/Img/button.png" alt=""></button></a>
+                          <% }%>
+                    </div>
+            </div>
+        </div>
+        
+    <div class="link">
+        <a href="/">Bosh sahifa / </a>
+        <a ><span>Search</span> </a>
+    </div>
+    <!-- MAGAZIN.... -->
+    <div id="magazin">
+        <div class="links">
+            <div class="link">
+            <h3>Search: <%= search%></h3>
+            <p>Furniture design</p>
+        </div>
+    <div id="internet-item"> 
+       
+    <div class="container">
+       <%for(item of product) {%>
+        <div class="card">
+            <div class="imgBx">
+                <a href="/product/<%= item._id%>" style="cursor: pointer;"><img src="<%= item.poster.min%>" alt=""></a>
+                <ul class="action">
+                    <li><i class="fas fa-share-alt"></i><span>Add to Wishlist</span></li>  
+                    <a href="/api/basket/<%=item._id%>"> <li> <i class="fas fa-cart-arrow-down"></i><span>Add to Cart</span></li></a>
+                    <a href="/product/<%= item._id%>" ><li><i class="fas fa-eye"></i><span>Viev Detalis</span></li></a>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="proName">
+                   <a href="/product/<%= item._id%>" style="cursor: pointer; color: #8D8D8D; text-decoration: none;"> <h3><%= item.name.uz%> </h3></a>
+                </div>
+                <div class="priceReating">
+                    <h2><a href="/product/<%= item._id%>" style="cursor: pointer; color: rgb(30,39,37);text-decoration: none;"><%= item.price%> so‘m </a></h2>
+                    <div class="raiting">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star gray"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }%>
+    </div>
+
+</div>
+</div>
+<div class="start_work">
+    <h1>Ishni boshlaymizmi?</h1>
+    <p>Mazkur formani to’ldiring va operatorimiz siz bilan 24 soat ichida bog‘lanadi.</p>
+</div>
+<form action="/api/contact" method="POST">
+    <div class="forms">
+    <div class="form_item">
+        <label for="">Ismingiz</label><br>
+        <input type="text"placeholder="Uchqun" name="fullname" required><br><br>
+        <label for="">Telefon raqam <span>*</span></label><br>
+        <input type="number"placeholder="99 _ _ _" required name="phone"> 
+        <button class="btn">Jo‘natish <img src="../Img/button.png" alt=""></button>
+    </div>
+    <div class="form_item kids_img">
+        <img src="./Img/Cool Kids - High Tech 1.png" alt="">
+    </form></div>
+    </div>
+</div> 
+</section> 
+
+<!-- START WORK -->
+
+
+
+<!-- FOOTER SECTION -->
+
+<%- include('../footer/footer.ejs'); -%>
+
+<script src="./singlepage2/js/index.js"></script>
+</body>
+</html>
+
+<!-- Uchqun Turdiev 2021 09 05 -->

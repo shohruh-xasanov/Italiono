@@ -1,0 +1,865 @@
+@media(max-width:1400px){
+
+    nav ul {
+        margin-left: 20px;
+    }
+
+}
+
+
+
+@media (max-width:1100px){
+  
+    .containers{
+        width: 90%;
+    }
+  
+}
+
+
+
+@media (max-width:1060px){
+    nav ul li{
+        margin-right: 40px;
+    }
+    /* DISCOURT */
+
+    .discount_cont{
+        justify-content: space-around;
+    }
+    .containers > button{
+        margin-left: 38%;
+        margin-top: 10px;
+    }
+    .discount_box img{
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (max-width:919.5px){
+
+    .head_firs{
+        padding: 5px 20px;
+    }
+   
+    
+    nav h4 a{
+        text-decoration: none;
+    }
+    
+    .corzina .fa-search{
+        color:#1E2725;
+        position: absolute;
+        top: 4px;
+        right: 33px;
+    }  
+
+    .corzina .fa-shopping-bag{
+        color:#555;
+        margin-left: 0px;
+    }
+    .corzina input{
+        display: none;
+        position: relative;
+        top: 40px;
+        left: -20px;
+        z-index: 999;
+    }
+    .corzina b{
+        position: absolute;
+        left: 160px;
+        top: 30px;
+        cursor:pointer;
+    }
+
+    .modal_carusel2 h3{
+        margin: 0px;
+        padding: 5px;
+    }
+   
+
+}
+
+
+@media (max-width: 420px) {
+    .hed_nambe a{
+        font-size: 16px;
+    }
+}
+
+@media (min-width:1600px){
+    .icon_box{
+        width: 95%;
+        margin:auto;
+        margin: 20px 0;
+    }
+    
+    .about{
+        margin-top: -40px;
+    }
+}
+@media (max-width:1600px){
+    .icon_box{
+        width: 95%;
+        margin:auto;
+        margin: 20px 0;
+    }
+    
+    .box_carusel .container{
+        width: 90%;
+    }
+    .box_carusel{
+        width: 210px;
+        margin-top: 30px;
+    
+    }
+    .containers > button{
+        margin-left: 41%;
+        margin-top: -10px;
+    }
+    .about{
+        margin-top: -40px;
+    }
+    .about p{
+        width: 60%;
+    }
+    .about_video img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    .modal_carusel{
+        width: 50%;
+        height: 300px;
+        margin-top: -70px;
+    }
+
+}
+
+
+@media (max-width:1220px){
+    .containers{
+        width: 90%;
+        margin:0 auto;
+    }
+    .box_carusel{
+        width: 210px;
+        height:340px;
+        margin-top: 10px;
+    
+    }
+    main .line__gradient{
+        background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.04) 100%);
+        mix-blend-mode: overlay;
+        width: 75%;
+    }
+    .form_item input{
+        width: 350px;
+        height: 60px;
+    }
+    .start_work{
+        margin-top: -30px;
+    }
+
+    .modal_carusel{
+        width: 50%;
+        height: 300px;
+        margin-top: -70px;
+    }
+    .modal_carusel2 li h3{
+        margin-top: 20px;
+    }
+    .modalca{
+        background: #E3E3E3;
+        width: 80%;
+        height: 410px;
+        padding: 30px;
+    }
+
+}
+
+@media (max-width:1100px){
+    .carusel_show{
+        flex-wrap: nowrap;
+    }
+    .box_carusel{
+        width: 240px;
+        height:340px;
+        margin-top: 10px;
+    }
+    .about p{
+        width: 70%;
+    }
+}
+
+
+@media (max-width:1060px){
+    nav ul li{
+        margin-right: 20px;
+    }
+  
+    /* OSHXONA */
+    .box{
+        width: 33%;
+        text-align: center;
+        font-weight: 600;
+        font-size: 34px;
+    }
+
+    /* DISCOURT */
+
+    .discount_cont{
+        justify-content: space-around;
+    }
+    .containers > button{
+        margin-left: 38%;
+        margin-top: 10px;
+    }
+    .discount_box img{
+        width: 100%;
+        margin: auto;
+    }
+
+    .marca{
+        padding: 40px 0;
+        margin-top: 30px;
+    }
+    .help_item{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 40px;
+    }
+    .help_box{
+        margin-top: 20px;
+        width: 404px;
+        height: 133px;
+    }
+  
+    .foot_center{
+        display: none;
+    }
+
+    .box_img_carusel{
+        min-width: 90px;
+        height:70px;
+        margin: 5px;
+    }
+
+    .modal_carusel{
+        height: 240px;
+        margin-top: -70px;
+    }
+    .modal_carusel img{
+        width: 100%;
+        height: 240px;
+    }
+    .modal_carusel2 button{
+        margin-top: 10px;
+    }
+    .modal_carusel2 li h3{
+        margin-top: 20px;
+    }
+    .modal_carusel2 ul li:nth-child(2){
+        padding: 0px;
+    } 
+    .modals{
+        display: flex;
+        justify-content: center;
+        display: none;
+    }
+    .modalca{
+        width: 90%;
+        height: 360px;
+        display: flex;
+        padding: 20px;
+    }
+    .modal_carusel2 li p:nth-child(2){
+        display: none;
+    }
+
+}
+
+@media (max-width:919.5px){
+    nav ul li{
+        margin-right: 35px;
+    }
+   
+    nav ul h4 a{
+        text-decoration: none;
+    }
+    
+    .fa-shopping-bag{
+        color:#555;
+        margin-left: 0px;
+    }
+
+    .modal_bottom{
+        width: 350px;
+        height: 100%;
+    }
+    .modal_box img{
+        width: 100px;
+        position: relative;
+    }
+
+    .big_box{
+        justify-content: space-around;
+        
+    }
+    .box_carusel{
+        width: 280px;
+        height:340px;
+        margin-top: 10px;
+    }
+    .containers > button{
+        margin-left: 35%;
+        margin-top: 30px;
+    }
+    .discount_box h1{
+        font-size: 22px;
+        line-height: 28px; 
+     }
+    .discount_box  p{
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      .marca img:nth-child(4){
+          display: none;
+      }
+      form .kids_img{
+          display: none;
+      }
+      .btn{
+        display: inline-block;
+        width: 203px;
+        margin-left: 15%;
+        margin-top: 10%;
+    }
+    .forms{
+        justify-content: center;
+    }
+    .form_item{
+        margin-left: 30%;
+    }
+  
+    footer .containers{
+        width: 95%;
+        margin: auto;
+    }
+    .foot_bottom h3{
+        margin-left: 10%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .navigation .bars{
+        display: block;
+        cursor: pointer;
+    }
+    
+    nav ul li{
+        margin-top: 10px;
+        font-size: 30px;
+    }
+    nav .ul_item{
+        position: absolute;
+        background:none;
+        left: 10px;
+        top: 100px;
+        display: flex;
+    }
+    nav .ul_item h4{
+        margin-right: 30px;
+        font-size: 30px;
+    }
+    nav ul ul a{
+        color: #222;
+        text-decoration: none;
+    }
+
+    nav ul .ul_item .fa-times{
+        position: absolute;
+        top: -100px;
+    }
+
+    nav .bars img{
+        display: block;
+        background-color:#F2F2F2;
+    }
+    .bars{
+        position: relative;
+    }
+    .corzina input{
+        display: none;
+        position: relative;
+        top: 40px;
+        z-index: 999;
+    }
+   
+
+    nav ul{
+        display: none;
+        margin-left: -5%;
+        position: absolute;
+        top: 100px;
+        left: 0; 
+        width: 100%;
+        height: 269px;
+        z-index: 1060;
+        background-color:#fff;
+    }
+    .carusel_hed{
+        flex-direction: column;
+    }
+    #carouselExampleControls{
+        width: 80%;
+    }
+    .column{
+        width: 80%;
+    }
+
+    main{
+        width: 100%;
+        height: 415px;
+        background-image: url(../Img/show_navbar\ 1623.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    main .line__gradient{
+        background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.04) 100%);
+        mix-blend-mode: overlay;
+        width: 70%;
+        height: 415px;
+    }
+
+    .box_carusel{
+        min-width: 260px;
+        height: 65%;
+        margin-left: 30px;
+    }
+
+    .line_text{
+        z-index: 999;
+        margin-top: -50px;
+        position:absolute;
+        left:40px;
+        width: 90%;
+        height: 0px;
+    }
+    .line_text h1{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 46px;
+        margin-top: 100px;
+        z-index: 999;
+    }
+    .line_text p{
+        width: 100%;
+    }
+    .btn{
+        display: inline-block;
+        width: 203px;
+        margin-left: 15%;
+        margin-top: 10%;
+    }
+    .forms{
+        justify-content: center;
+    }
+    .form_item{
+        margin-left: 24%;
+        margin-right: 24%;
+    }
+    
+    .box{
+        font-size: 25px;
+    }
+    .box_carusel{
+        width: 330px;
+        height:340px;
+        margin-top: 10px;
+    }
+    .discount_box img{
+        width: 100%;
+        margin: auto;
+    }
+    .containers > button{
+        margin-left: 30%;
+        margin-top: 60px;
+    }
+    .marca{
+        justify-content: space-between;
+        padding: 30px 0;
+        margin-top: 30px;
+    }
+    .marca img{
+        width: 30%;
+    }
+    .about_video img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .containers p{
+        width: 80%;
+    }
+    .media{
+        padding: 20px;
+    }
+    .media_icons{
+        margin-top: -45px;
+    }
+    .media_icons a:nth-child(4){
+        display: none;
+    }
+    .footer_item h1{
+        font-size: 22px;
+    }
+    .foot_bottom{
+        margin-top: -5px;
+    }
+
+
+    .modals{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        display: none;
+    }
+    .modalca{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+    }
+    .modal_carusel{
+        width: 80%;
+        height: 300px;
+        margin-top: 20px;
+        margin-left: -30px;
+    }
+    .modal_carusel2{
+        margin-top: 10px;
+        padding: 0 40px 10px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    h1{
+        font-size: 22px;
+    }
+
+    .head_firs{
+        padding: 0 30px;
+    }
+    .head_firs a {
+        font-size: 15px;
+    }
+    .modal_bottom{
+        width: 100%;
+        height: 880px;
+        padding: 0 18px;
+        right: 0%;
+        left: 0;
+    }
+
+    .modal_text h3{
+        margin: 0;
+        padding: 6px 0;
+        font-size: 14px;
+    }
+    .modal_box img{
+        width: 100px;
+        position: relative;
+    }
+    .modal_bottom input{
+        width: 100%;
+        height: 40px;
+        padding-left: 10px;
+        margin-right: 5px;
+        outline: none;
+    }
+
+    .head_firs{
+        padding: 0 30px;
+    }
+
+    .line_text p{
+        padding-top: 10px;
+        width: 100%;
+    }
+    .line_text button{
+        margin-top: 30px;
+    }
+    .farniture{
+        margin-top: -20px;
+    }
+    
+    .carusel{
+        margin-top: -30px;
+    }
+    .carusel_show{
+        justify-content: start;
+    }
+
+    .box_carusel{
+        min-width: 170px;
+        height: 65%;
+        margin-left: 20px;
+    }
+    .box_carusel img{
+        height: 100px;
+    }
+    .carusel_text p{
+        font-size: 18px;
+        display: block;
+    }
+    .carusel_text{
+        margin-left: 30px;
+    }
+
+    .discount{
+        display: none;
+    }
+    .icon_box{
+        width: 95%;
+        margin: auto;
+        height: 52px;
+        margin: 10px 0;
+    }
+    .icon > .far {
+        padding: 0 15px;
+    }
+    .containers b{
+        font-size: 18px;
+    }
+
+    .about{
+        margin-top: -120px;
+    }
+    .containers > p{
+        width: 90%;
+    }
+    .media{
+        width: 100%;
+        height: 150px;
+        background: #F8F8F8;
+        margin-top: -40px;
+    }
+    .media_texts{
+        display: none;
+    }
+    .media_icons{
+        margin: 0;
+        padding: 15px;
+    }
+    .media_icons a{
+        font-size: 60px;
+    }
+    .media_icons img{
+        width: 55px;
+    }
+   
+    .help_item{
+        margin-top: -30px;
+    }
+    .carusel h1{
+        font-size:18px;
+    }
+
+    footer{
+        margin-top: -80px;
+    }
+    .box h1{
+        font-size:30px;
+    }
+    .foot_right{
+        display: none;
+    }
+
+    .foot_text{
+        padding-top: 40px;
+    }
+    .foot_bottom{
+        margin-top: -5px;
+    }
+    
+    .foot_bottom b{
+        display: none;
+    }
+}
+
+
+@media (max-width: 500px){
+
+    .icon_box{
+        width: 95%;
+        margin: auto;
+        height: 42px;
+        margin: 15px 5px;
+    }
+    .containers b{
+        font-size: 17px;
+        line-height: 30px;
+    }
+    .box_carusel img{
+        height: 130px;
+    }
+    .box_carusel{
+        height:260px;
+        margin-top: 10px;
+    }
+    .containers > h1{
+        margin-top: -30px;
+    }
+  
+    .icon > .far {
+        padding: 0 10px;
+    }
+    .form_item{
+        margin: 0 2px;
+    }
+    .form_item input{
+        width: 100%;
+        height: 60px;
+        overflow: hidden;
+        padding-left: 00px;
+        margin-right: 0px;
+    }
+    .form_item button{
+        margin-left: 20%;
+    }
+    .foot_img{
+        width: 100%;
+    }
+
+    .modal_bottom{
+        position: absolute;
+        top: 100px;
+        right: 14%;
+    }
+}
+
+@media (max-width: 420px) {
+ 
+    .box_carusel{
+        height:230px;
+        margin-top: 10px;
+    }
+    
+    .hed_nambe a{
+        font-size: 18px;
+        line-height: 17px;
+        margin-left: 5px;
+    }
+    .head_firs{
+        padding:0 10px;
+    }
+    .line_text{
+        width: auto;
+    }
+    
+    .farniture .container{
+        width: 95%;
+    }
+    .carusel_text > p{
+        font-size: 20px;
+        margin-left: 30px;
+    }
+    .carusel_show{
+        margin-top: 15px;
+    }
+    .icon_box{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        height: 32px;
+        margin: 10px 5px;
+    }
+    .containers{
+        width: 95%;
+        margin: auto;
+    }
+
+    .box h1{
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    
+    .box_carusel img{
+        height: 110px;
+    }
+    .box_carusel{ 
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .containers b{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .containers > span{
+        font-size: 17px;
+        margin-left: 10px;
+    }
+    .containers > h1{
+        margin-top: -40px;
+    }
+    .foot_bottom{
+        top: 530px;
+        height: 70px;
+    }
+    .foot_bottom h3{
+        margin-left: 2%;
+        font-size: 12px;
+    }
+    footer{
+        width: 100%;
+        position: relative;
+    }
+   
+    .modal_carusel{
+        width: 90%;
+        margin-top: 20px;
+        margin-left: -20px;
+    }
+    
+}
+
+
+@media (max-width: 360px){
+    .line_text{
+        z-index: 999;
+        position:absolute;
+        left:10px;
+    }
+    .line_text p{
+        padding: 0;
+    }
+    .line_text h1{
+        padding: 10px;
+        font-size: 24px;
+    }
+    .line_text button{
+        margin-top: 10px;
+    }
+
+    .box_carusel{
+        width: 70%;
+    }
+    .form_item button{
+        margin-left: 2%;
+    }
+    .column{
+        width: 90%;
+        padding: 0;
+        margin: 0;
+    }
+}
