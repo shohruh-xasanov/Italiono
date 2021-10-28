@@ -22,12 +22,14 @@
 <% var product1%>
 <% var product2%>
         <main>
+            <%if(collection[0]){%>
                 <div class="containers">
                 <div class="line_text">  <h1><%= collection[0].name.uz%> Collection</h1>
             <p><%= collection[0].title.uz%></p>
             <a href="/ru/collection/<%= collection[0]._id%>" style="text-decoration: none;"> <button style="cursor: pointer;"> Batafsil <i class="fas fa-arrow-right"></i></button></a>
         </div>
     </div>
+    <% }%>
         <div class="line__gradient">  </div>
         </main>
     
@@ -46,7 +48,9 @@
     <div class="carusel">
     <div class="carusel_texts">
          <div class="carusel_text">
+             <%if(product[0]){%>
              <h1><%= product1[0].categoryID.name.ru%></h1>
+             <% }%>
         <p>Furniture design</p>
     </div>
         <div class="carusel_text tect_icons"><i class="fas fa-angle-left"></i> <i class="fas fa-angle-right"></i></div>
@@ -81,7 +85,7 @@
 
 
       <!-- SECTION DISCOUNT -->
-
+    <%if(chegirma[0]){%>
     <section class="discount">
         <div class="containers">
         <div class="discount_cont">
@@ -97,16 +101,19 @@
         <a href="/ru/product/<%= chegirma[0].productID._id%>"> <button style="cursor: pointer; margin-top: 20px;"> Batafsil <i class="fas fa-arrow-right"></i></button></a> 
     </div>
     </section> 
+    <% }%>
 
     <!-- SECTION ABOUT -->
 
          <section class="about" style="margin-top: 20px;">
         <div class="containers">
         <h1>O нас</h1>
+        <%if(about[0]){%>
         <p><%= about[0].title.ru%> <span class="paragrf"> text, this is simply copy that serves to fill a space without actually saying anything meaningful.</span></p>
         <div class="about_video">
             <img src="<%= about[0].image%>" alt="">
         </div>
+        <% }%>
         <h1>Наши клиенты</h1>
         <div class="marca">
             <%for(item of customer){%>
@@ -116,7 +123,9 @@
         <div class="carusel">
             <div class="carusel_texts">
                  <div class="carusel_text text2">
+                     <%if(product2[0]){%>
                      <h1><%= product2[0].categoryID.name.ru%></h1>
+                     <% }%>
                 <h3>Furniture design</h3>
             </div>
                 <div class="carusel_text tect_icons right"><i class="fas fa-angle-left"></i> <i class="fas fa-angle-right"></i></div>
