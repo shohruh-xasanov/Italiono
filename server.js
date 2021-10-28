@@ -12,7 +12,6 @@ const ejs = require('ejs')
 const methodOverride = require('method-override')
 const app = express()
 const fs = require('fs')
-const path = require('path')
 const compression = require('compression')
 
 connectDB()
