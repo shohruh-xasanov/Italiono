@@ -6,7 +6,7 @@ const collection = {
         const {nameuz,nameru,titleuz, titleru, productID} = req.body
         const collection = new Collection({name:{uz:nameuz, ru:nameru},title:{uz:titleuz,ru:titleru }, productID})
         await collection.save()
-        res.redirect('/')
+        res.redirect('/api/collection')
     },
     getAll : async (req,res)=>{
         const result = await Collection.find().populate('productID')

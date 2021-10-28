@@ -17,7 +17,10 @@ exports.searchNewsclient = async(req,res)=>{
     let searchExpression_name = new RegExp(req.query.name)
     let search = req.query.name
     const user = req.session.user
-    const basket = await Basket.find({userID:user.id}).limit(3).sort({createdAt:-1}).populate('productID')
+    let basket = []
+    if(user){
+        basket = await Basket.find({userID:user.id}).limit(3).sort({createdAt:-1}).populate('productID')
+    }
     const  product = await Product.find().or([
         {['name.uz']:{ $regex: searchExpression_name, $options: 'i'}}
     ]).populate('categoryID').limit(8)
@@ -30,7 +33,10 @@ exports.searchNewsclientru = async(req,res)=>{
     let searchExpression_name = new RegExp(req.query.name)
     let search = req.query.search
     const user = req.session.user
-    const basket = await Basket.find({userID:user.id}).limit(3).sort({createdAt:-1}).populate('productID')
+    let basket = []
+    if(user){
+        basket = await Basket.find({userID:user.id}).limit(3).sort({createdAt:-1}).populate('productID')
+    }
     const  product = await Product.find().or([
         {['name.ru']:{ $regex: searchExpression_name, $options: 'i'}}
     ]).populate('categoryID').limit(8)
