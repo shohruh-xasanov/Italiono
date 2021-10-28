@@ -8,14 +8,14 @@ const store= multer.diskStorage({
     destination:(req, file, cb)=>{
         if(file.fieldname === "poster")
         {
-            cb(null, 'public/uploads/poster')
+            cb(null, '/public/uploads/poster')
         }
         if(file.fieldname === "images")
         {
-            cb(null, 'public/uploads/image')
+            cb(null, '/public/uploads/image')
         }if(file.fieldname === 'image')
         {
-            cb(null, 'public/uploads/image')
+            cb(null, '/public/uploads/image')
         }
     },
     filename: (req, file, cb)=>{
