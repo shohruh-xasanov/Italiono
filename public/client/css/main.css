@@ -452,13 +452,17 @@ nav ul ul{
     .head_firs{
         padding: 0 30px;
     }
+    nav .italiano
+    {
+        margin-left: 15px;
+    }
     .head_firs a {
         font-size: 15px;
     }
     .hed_lang
     {
        position: relative;;
-       right: -30px;
+       right: -35px;
     }
     .modal_bottom{
         width: 100%;
