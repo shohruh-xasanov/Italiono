@@ -455,6 +455,11 @@ nav ul ul{
     .head_firs a {
         font-size: 15px;
     }
+    .hed_lang
+    {
+       position: relative;;
+       right: -30px;
+    }
     .modal_bottom{
         width: 100%;
         height: 880px;
