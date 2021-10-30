@@ -533,6 +533,16 @@ nav ul ul{
     .box_carusel img{
         height: 140px;
     }
+    .containers span
+    {
+        display: inline-block;
+        padding-top: 15px;
+    }
+    .containers b
+    {
+        display: inline-block;
+        padding-top: 15px;
+    }
     .carusel_text p{
         font-size: 18px;
         display: block;
