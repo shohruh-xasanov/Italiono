@@ -527,7 +527,7 @@ nav ul ul{
 
     .box_carusel{
         width: 380px;
-        height:280px;
+        min-height:180px;
         margin-top: 10px;
     }
     .box_carusel img{
@@ -607,7 +607,7 @@ nav ul ul{
         display: none;
     }
 }
-
+/* 
 
 @media (max-width: 500px){
 
@@ -804,4 +804,4 @@ nav ul ul{
         margin-left: 2%;
     }
 
-}
+} */
