@@ -77,7 +77,7 @@
             <div class="head_firs">
                 <div class="hed_nambe">    <i class="fas fa-phone-alt"></i><a href="tel:+99871 - 123-45-67">+99871 - 123-45-67</a></div>
             
-              <div class="hed_lang" style="margin-right: -20px;">  <img src="/Img/2560px-Flag_of_Uzbekistan.svg.png" alt="bu erda rasm bor">
+              <div class="hed_lang" style="margin-right: 20px;">  <img src="/Img/2560px-Flag_of_Uzbekistan.svg.png" alt="bu erda rasm bor">
                 <div class="dropdown">
                     <button class="dropbtn">Uz</button>
                     <div class="dropdown-content">
@@ -87,7 +87,7 @@
                 <%if(user){%>
                 <p style="padding-top: 15px;"><%= user.name%> <a href="/logout" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181); padding-left: 5px;"> Logout</a></p>
                 <%}else{%>
-                  <p style="padding-top: 15px;"><a href="/api/login" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181); ">Login</a></p>
+                  <p style="padding-top: 0;"><a href="/api/login" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181);"><i class="fas fa-sign-out-alt" ></i></a></p>
                   <% }%>
                 </div>
             </div>
