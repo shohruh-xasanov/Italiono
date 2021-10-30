@@ -466,7 +466,7 @@ nav ul ul{
     .hed_lang
     {
        position: relative;;
-       right: -20px;
+       right: -30px;
     }
     .fas 
     {
@@ -538,10 +538,10 @@ nav ul ul{
         display: inline-block;
         padding-top: 15px;
     }
-    .containers b
+    .containers b a
     {
         display: inline-block;
-        padding-top: 15px;
+        padding-top: 20px;
     }
     .carusel_text p{
         font-size: 18px;
