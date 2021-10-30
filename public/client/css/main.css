@@ -452,6 +452,10 @@ nav ul ul{
     .head_firs{
         padding: 0 30px;
     }
+    .bars
+    {
+        padding-left: 10px;
+    }
     nav .italiano
     {
         margin-left: 40px;
@@ -462,7 +466,7 @@ nav ul ul{
     .hed_lang
     {
        position: relative;;
-       right: -25px;
+       right: -30px;
     }
     .fas 
     {
