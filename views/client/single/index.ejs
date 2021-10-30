@@ -289,7 +289,7 @@
         <div class="discount_box dicount_border">
          <h1>CHEGIRMA</h1>
          <p><a href="/product/<%= chegirma[0].productID._id%>" style="cursor: pointer; color: rgb(30,39,37); text-decoration: none;"><%= chegirma[0].productID.name.uz%></a></p>
-         <h2><%= (chegirma[0].count/chegirma[0].productID.price)*100%><sub>off</sub><sup>%</sup></h2>
+         <h2><%= Math.floor((chegirma[0].count/chegirma[0].productID.price)*100)%><sub>off</sub><sup>%</sup></h2>
         </div>
         <div class="discount_box">
             <a href="/product/<%= chegirma[0].productID._id%>"> <img style="width:447px; height: 280px;" src="<%= chegirma[0].productID.images[0].url%>" alt=""></a>
