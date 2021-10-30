@@ -132,6 +132,7 @@ nav{
 
 .bars{
     position: absolute;
+    cursor: pointer;
 }
 nav .bars img{
     display: none;
@@ -713,4 +714,5 @@ footer h3{
 .foot_bottom b{
     font-weight: 400;
 }  
+
 
