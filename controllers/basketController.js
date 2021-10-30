@@ -17,7 +17,7 @@ const basketController = {
         const {id} = req.params
         const user = req.session.user
         const basket = await Basket.find({userID:id}).sort({createdAt:-1}).populate('productID')
-        const order = await Order.find().sort({createdAt:-1}).populate('productID')
+        const order = await Order.find({userID:id}).sort({createdAt:-1}).populate('productID')
         res.render('client/basket/basket', {
             layout:false, basket,user,order
         })

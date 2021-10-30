@@ -576,9 +576,19 @@
     {
         padding-right: 10px;
     }
+    .containers span
+    {
+        display: inline-block;
+        padding-top: 15px;
+    }
+    .containers b a
+    {
+        display: inline-block;
+        padding-top: 20px;
+    }
     .corzina
     {
-        margin-right: -60px;
+        right: 20px;
     }
     .modal_bottom{
         width: 100%;
@@ -714,7 +724,7 @@
     }
 }
 
-
+/* 
 @media (max-width: 500px){
 
     .icon_box{
@@ -880,4 +890,4 @@
         padding: 0;
         margin: 0;
     }
-}
+} */
