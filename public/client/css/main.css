@@ -454,7 +454,7 @@ nav ul ul{
     }
     nav .italiano
     {
-        margin-left: 15px;
+        margin-left: 40px;
     }
     .head_firs a {
         font-size: 15px;
@@ -462,7 +462,11 @@ nav ul ul{
     .hed_lang
     {
        position: relative;;
-       right: -35px;
+       right: -25px;
+    }
+    .fas 
+    {
+        padding-right: 10px;
     }
     .modal_bottom{
         width: 100%;
