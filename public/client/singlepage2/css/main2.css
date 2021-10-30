@@ -235,6 +235,23 @@
         z-index: 999;
     }
     
+    .bars
+    {
+        padding-left: 10px;
+    }
+    nav .italiano
+    {
+        padding-left: 0;
+        margin-right: 40px;
+    }
+    .hed_lang
+    {
+        padding-right: 10px;
+    }
+    .corzina
+    {
+        margin-right: -60px;
+    }
     .head_firs{
         padding: 0 30px;
     }
