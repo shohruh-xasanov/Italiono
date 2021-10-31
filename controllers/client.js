@@ -17,14 +17,16 @@ const getUser = {
         }
     },
     createUserPage : async (req,res)=>{
+        const lang = req.session.lang
         res.render('client/profile/reg', {
-            layout:false
+            layout:false,lang
         })
     },
     userFind :async (req,res)=>{
+        const lang = req.session.lang
         const result = await Client.findById(req.params.id).select('-password -login -role')
         res.render('client/profile/reg',{
-            layout:false, result
+            layout:false, result,lang
         })
     },
     /* User update */
@@ -43,8 +45,9 @@ const getUser = {
         }
     },
     getLogin : async (req,res)=>{
+        const lang = req.session.lang
         res.render('client/profile/login',{
-            layout:false
+            layout:false, lang
         })
     },
     login : async (req,res,next)=>{

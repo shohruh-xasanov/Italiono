@@ -114,14 +114,16 @@
 </head>
 <body>
 <% var data%>
+<% var lang%>
+<% if(lang ==='ru') {%>
     <div class="head_firs">
         <div class="hed_nambe">    <i class="fas fa-phone-alt"></i><a href="tel:+99871 - 123-45-67">+99871 - 123-45-67</a></div>
     
       <div class="hed_lang">  <img src="/Img/2560px-Flag_of_Uzbekistan.svg.png" alt="bu erda rasm bor">
         <div class="dropdown">
-            <button class="dropbtn">Uz</button>
+            <button class="dropbtn">Ru</button>
             <div class="dropdown-content">
-            <a href="/ru/changelang">Ru</a>
+            <a href="/changelang">Uz</a>
             </div>
         </div>    
         </div>
@@ -155,6 +157,50 @@
     </nav>
 </div>
 </div>
+<% }else{%>
+    <div class="head_firs">
+        <div class="hed_nambe">    <i class="fas fa-phone-alt"></i><a href="tel:+99871 - 123-45-67">+99871 - 123-45-67</a></div>
+    
+      <div class="hed_lang">  <img src="/Img/2560px-Flag_of_Uzbekistan.svg.png" alt="bu erda rasm bor">
+        <div class="dropdown">
+            <button class="dropbtn">Uz</button>
+            <div class="dropdown-content">
+            <a href="/ru/changelang">Ru</a>
+            </div>
+        </div>    
+        </div>
+    </div>
+    <div class="navigation" style="margin-bottom: 40px;">
+    <div class="containers">
+    <nav>
+       <div class="bars"><img src="/Img/Vector (2).svg" alt=""></div> 
+        <img class="italiano" src="/Img/ITALIANO.png" alt="">
+        <ul>
+            <i class="fas fa-times"></i>
+            <li><a href="/ru">Главная</a></li>
+            <li><a href="/ru/catalog">Каталог</a></li>
+            <li><a href="/ru/about">О сайте</a></li>
+            <li><a href="#">Контакты </a></li>
+            <ul>
+                <i class="fas fa-times"></i>
+                <h4><a href=""><i class="fab fa-facebook"></i></a> </h4>
+                <h4><a href=""><i class="fab fa-instagram"></i></i> </a></h4> 
+                <h4><a href=""><i class="fab fa-telegram"></i></a></h4>
+            </ul>
+        </ul>
+        <div class="corzina">
+            <b>x</b>
+            <form action="/поиск" class="app-search">
+            <input name="name" type="search" placeholder="matn kiriting" autocomplete="off" />
+            <i class="fas fa-search"></i>
+            <button style="display: none;" type="submit"></button>
+        </form>
+        </div>
+       
+    </nav>
+</div>
+</div>
+    <% }%>
 
  <!-- MODALL CA -->
 
@@ -164,68 +210,132 @@
    
 
     <!-- START WORK -->
+    
+<% if(lang ==='ru') {%>
 <div class="forma" style="margin-bottom: 80px;">
     <div class="start_work">
-        <h1>Saytga Kirish</h1>
-        <p>Saytga Ro'yhatdan o'tmaganmisiz? <span> </span><a href="/api/register"> Ro'yhatdan o'tish</a></p>
+        <h1>Войти на сайт</h1>
+        <p>Не зарегистрированы на сайте?<span> </span><a href="/api/register"> Регистрация</a></p>
     </div>
     <form action="/api/login" method="POST">
         <div class="forms">
         <div class="form_item">
             <%if(data) {%>
-            <p style="text-align: center; font-size: large; color: red;"><%= data%> !!!</p>
+            <p style="text-align: center; font-size: large; color: red;">Ошибка пароля или входа в систему !!!</p>
             <% }%>
-            <label for="">Elektron Pochtangiz <span>*</span></label><br>
+            <label for="">Ваш адрес электронной почты <span>*</span></label><br>
             <input name="email" type="email"placeholder="example@gmail.com" required minlength="5"> <br><br>
-            <label for="">Parolingiz <span>*</span></label><br>
+            <label for="">Ваш пароль <span>*</span></label><br>
             <input name="password" type="password"placeholder="*** *** ***" required minlength="5"> 
-            <button  class="btn">Saytga kirish <img src="/Img/button.png" alt=""></button>
+            <button  class="btn">Войти на сайт <img src="/Img/button.png" alt=""></button>
         </div>
         </form>
 </div>
+<% } else{%>
+    <div class="forma" style="margin-bottom: 80px;">
+        <div class="start_work">
+            <h1>Saytga Kirish</h1>
+            <p>Saytga Ro'yhatdan o'tmaganmisiz? <span> </span><a href="/api/register"> Ro'yhatdan o'tish</a></p>
+        </div>
+        <form action="/api/login" method="POST">
+            <div class="forms">
+            <div class="form_item">
+                <%if(data) {%>
+                <p style="text-align: center; font-size: large; color: red;"><%= data%> !!!</p>
+                <% }%>
+                <label for="">Elektron Pochtangiz <span>*</span></label><br>
+                <input name="email" type="email"placeholder="example@gmail.com" required minlength="5"> <br><br>
+                <label for="">Parolingiz <span>*</span></label><br>
+                <input name="password" type="password"placeholder="*** *** ***" required minlength="5"> 
+                <button  class="btn">Saytga kirish <img src="/Img/button.png" alt=""></button>
+            </div>
+            </form>
+    </div>
+    <% }%>
    
     </section> 
 
     
         
 <!-- FOOTER SECTION -->
-<footer>
-      
-    <div class="foot_scroll">
-        <a href="#" ><img src="/Img/Scroll.png" alt=""></a>
-    </div>
-      
-    <div class="container">
     
-         <div class="footer_item">
-             <div class="foot_text"> 
-                <h1>Kompaniya haqida</h1>                   
-                 <h4><i class="fas fa-envelope-open"></i> Samarqand sh., Bog‘i shamol k,. 18-uy</h4>
-            <h4><i class="fas fa-phone-alt"></i><a href="tel:+9987-123-45-67">+9987-123-45-67</a> </h4>
-            <h4><i class="fas fa-envelope"></i><a href="https://italiano@gmail.com">italiano@gmail.com</a></h4>
-              </div>
-             <div class="foot_text foot_center">  
-                <h1>Ma’lumotlar</h1>             
-                <h4>Biz haqimizda</h4>
-                <h4>Aloqa</h4> 
-             </div> 
-
-              <div class="foot_text foot_right">
-                <h1>Ijtimoiy tarmoqlar</h1>
-                <h4><a href=""><i class="fab fa-facebook"></i> Facebook</a> </h4>
-                <h4><a href=""><i class="fab fa-instagram"></i></i> Instagram</a></h4> 
-                <h4><a href=""><i class="fab fa-telegram"></i> Telegram</a></h4>
-             </div>
-         </div>
+<% if(lang ==='ru') {%>
+    <footer style="margin-top: 30px;">
+          
+        <div class="foot_scroll" >
+            <a style="position: relative; bottom: 0;" href="#"><img src="/Img/Scroll.png" alt=""></a>
+        </div>
+          
+        <div class="container">
         
-     </div>
-     </div>
-    <div class="foot_img"> <img src="/Img/footer.jpg" alt=""></div>
- </footer>  
- 
-  <div class="foot_bottom">
-     <h3>Copyright  &copy;  2016 <span> Italiano. </span> <b> Barcha  huquqlar  himoyalangan.</b></h3>
- </div> 
+             <div class="footer_item">
+                 <div class="foot_text"> 
+                    <h1>О компании</h1>                   
+                     <h4><i class="fas fa-envelope-open"></i> Самарканд, Ветряной сад 18 дом</h4>
+                <h4><i class="fas fa-phone-alt"></i><a href="tel:+9987-123-45-67">+9987-123-45-67</a> </h4>
+                <h4><i class="fas fa-envelope"></i><a href="https://italiano@gmail.com">italiano@gmail.com</a></h4>
+                  </div>
+                 <div class="foot_text foot_center">  
+                    <h1>Информация</h1>             
+                    <h4>Bо нас</h4>
+                    <h4>Коммуникация</h4> 
+                 </div> 
+    
+                  <div class="foot_text foot_right">
+                    <h1>Социальные сети</h1>
+                    <h4><a href=""><i class="fab fa-facebook"></i> Facebook</a> </h4>
+                    <h4><a href=""><i class="fab fa-instagram"></i></i> Instagram</a></h4> 
+                    <h4><a href=""><i class="fab fa-telegram"></i> Telegram</a></h4>
+                 </div>
+             </div>
+            
+         </div>
+         </div>
+        <div class="foot_img"> <img src="/Img/footer.jpg" alt=""></div>
+     </footer>  
+     
+      <div class="foot_bottom">
+         <h3>Copyright  &copy;  2016 <span> Italiano. </span> <b> Все права защищены.</b></h3>
+     </div> 
+     <% }else {%>
+        <footer style="margin-top: 30px;">
+              
+            <div class="foot_scroll" >
+                <a style="position: relative; bottom: 0;" href="#"><img src="/Img/Scroll.png" alt=""></a>
+            </div>
+              
+            <div class="container">
+            
+                 <div class="footer_item">
+                     <div class="foot_text"> 
+                        <h1>Kompaniya haqida</h1>                   
+                         <h4><i class="fas fa-envelope-open"></i> Samarqand sh., Bog‘i shamol k,. 18-uy</h4>
+                    <h4><i class="fas fa-phone-alt"></i><a href="tel:+9987-123-45-67">+9987-123-45-67</a> </h4>
+                    <h4><i class="fas fa-envelope"></i><a href="https://italiano@gmail.com">italiano@gmail.com</a></h4>
+                      </div>
+                     <div class="foot_text foot_center">  
+                        <h1>Ma’lumotlar</h1>             
+                        <h4>Biz haqimizda</h4>
+                        <h4>Aloqa</h4> 
+                     </div> 
+        
+                      <div class="foot_text foot_right">
+                        <h1>Ijtimoiy tarmoqlar</h1>
+                        <h4><a href=""><i class="fab fa-facebook"></i> Facebook</a> </h4>
+                        <h4><a href=""><i class="fab fa-instagram"></i></i> Instagram</a></h4> 
+                        <h4><a href=""><i class="fab fa-telegram"></i> Telegram</a></h4>
+                     </div>
+                 </div>
+                
+             </div>
+             </div>
+            <div class="foot_img"> <img src="/Img/footer.jpg" alt=""></div>
+         </footer>  
+         
+          <div class="foot_bottom">
+             <h3>Copyright  &copy;  2016 <span> Italiano. </span> <b> Barcha  huquqlar  himoyalangan.</b></h3>
+         </div> 
+        <% }%>
 
  <script src="/js/script.js"></script>
 
