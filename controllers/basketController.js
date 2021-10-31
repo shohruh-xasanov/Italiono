@@ -19,7 +19,7 @@ const basketController = {
         const basket = await Basket.find({userID:id}).sort({createdAt:-1}).populate('productID')
         const order = await Order.find({userID:id}).sort({createdAt:-1}).populate('productID')
         res.render('client/basket/basket', {
-            layout:false, basket,user,order
+            layout:false, basket,user,order, title:"Savatcha"
         })
     },
     basketSearchRu : async(req,res)=>{

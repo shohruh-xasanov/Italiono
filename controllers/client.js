@@ -19,14 +19,14 @@ const getUser = {
     createUserPage : async (req,res)=>{
         const lang = req.session.lang
         res.render('client/profile/reg', {
-            layout:false,lang
+            layout:false,lang, title:"Registratsiya"
         })
     },
     userFind :async (req,res)=>{
         const lang = req.session.lang
         const result = await Client.findById(req.params.id).select('-password -login -role')
         res.render('client/profile/reg',{
-            layout:false, result,lang
+            layout:false, result,lang, title:"Registratsiya"
         })
     },
     /* User update */
@@ -47,7 +47,7 @@ const getUser = {
     getLogin : async (req,res)=>{
         const lang = req.session.lang
         res.render('client/profile/login',{
-            layout:false, lang
+            layout:false, lang, title:"Login"
         })
     },
     login : async (req,res,next)=>{
@@ -60,17 +60,17 @@ const getUser = {
             const lang = req.session.lang
             if(!user){
                     return res.render('client/profile/login',{
-                        layout:false, data:"Parol yoki login xato",lang
+                        layout:false, data:"Parol yoki login xato",lang,title:"Login"
                     })
                 } user.matchPassword(password, (err, isMatch)=>{
                     if(err){
                        return res.render('client/profile/login',{
-                        layout:false, data:"Parol yoki login xato",lang
+                        layout:false, data:"Parol yoki login xato",lang,title:"Login"
                     })
                     }
                     if (!isMatch) {
                        return res.render('client/profile/login',{
-                        layout:false, data:"Parol yoki login xato",lang
+                        layout:false, data:"Parol yoki login xato",lang,title:"Login"
                     })
                       }else{
                           req.session.user = data={id:user._id, name:user.name}

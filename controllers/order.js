@@ -15,7 +15,7 @@ const order = {
         const basket = await Basket.find({userID:user.id}).limit(3).sort({createdAt:-1}).populate('productID')
         const result = await Product.findById(req.params.id)
         res.render('client/order/order',{
-            layout:false,result,user,basket
+            layout:false,result,user,basket,title:"Order"
         })
     },
     createRu : async (req,res)=>{

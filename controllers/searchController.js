@@ -26,7 +26,7 @@ exports.searchNewsclient = async(req,res)=>{
     ]).populate('categoryID').limit(8)
     res.render("client/search/index", {
         title:search,
-        layout: false, product, search,basket,user
+        layout: false, product, search,basket,user,title:"Search"
     });
 }
 exports.searchNewsclientru = async(req,res)=>{
@@ -42,6 +42,6 @@ exports.searchNewsclientru = async(req,res)=>{
     ]).populate('categoryID').limit(8)
     res.render("clientru/search/index", {
         title:search,
-        layout: false, product, search,user,basket
+        layout: false, product, search,user,basket,title:"Search"
     });
 }
