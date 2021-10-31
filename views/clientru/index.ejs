@@ -22,11 +22,10 @@
 <% var product1%>
 <% var product2%>
         <main>
-            <%if(collection[0]){%>
+            <%if(product1[0]){%>
                 <div class="containers">
-                <div class="line_text">  <h1><%= collection[0].name.uz%> Collection</h1>
-            <p><%= collection[0].title.uz%></p>
-            <a href="/ru/collection/<%= collection[0]._id%>" style="text-decoration: none;"> <button style="cursor: pointer;"> Batafsil <i class="fas fa-arrow-right"></i></button></a>
+                <div class="line_text">  <h1>Kаталог: <%= product1[0].categoryID.name.ru%> </h1>
+            <a href="/ru/catalog" style="text-decoration: none;"> <button style="cursor: pointer;"> Batafsil <i class="fas fa-arrow-right"></i></button></a>
         </div>
     </div>
     <% }%>

@@ -86,6 +86,27 @@
       background-color: #1E2725;
       color: #fff;
     }
+          
+@media (max-width: 600px) {
+    .form_item
+    {
+        margin-bottom: 90px;
+    }
+    .form_item .btn {
+        
+        position: relative; 
+        right: -75px; 
+        margin: 15px 0;
+    }
+    .foot_scroll a
+    {
+        position: relative;
+    }
+    .navigation
+    {
+      margin-bottom: 40px;
+    }
+  }
     </style>
 </head>
 <body>
@@ -161,7 +182,7 @@
                    <p style="display: inline-block; padding-top: 20px; font-size: larger">Savatda hozirda malumotlar yo'q</p>
                    <b>x</b>
                </div>
-               <a href="/api/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Savatga o'tish <img src="./Img/button.png" alt=""></button></a>
+               <a href="/api/ru/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Savatga o'tish <img src="./Img/button.png" alt=""></button></a>
                </div>
                  <% }%>
                <%if(basket[1]) {%>
@@ -187,7 +208,7 @@
                          </div>
                          <% }%>
                          <%if(basket[0]) {%>
-                   <a href="/api/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Savatga o'tish <img src="./Img/button.png" alt=""></button></a>
+                   <a href="/api/ru/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Savatga o'tish <img src="./Img/button.png" alt=""></button></a>
                          <% }%>
                          <% }else{%>
                            <div class="modal_text" >
@@ -213,7 +234,7 @@
         <h1>Заказ товара</h1>
         <p>Заполните формы ниже, и мы свяжемся с вами</p></span>
     </div>
-    <form action="/api/order/create" method="POST">
+    <form action="/api/ru/order/create" method="POST">
         <div class="forms">
         <div class="form_item">
             <label for="" style="margin-bottom: 20px; " ><p style="

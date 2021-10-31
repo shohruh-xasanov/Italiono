@@ -18,6 +18,21 @@ const order = {
             layout:false,result,user,basket
         })
     },
+    createRu : async (req,res)=>{
+        const {name, phone,address, email,productID} = req.body
+        const user = req.session.user
+        const order = new Order({name, phone,address, email,productID, userID:user.id})
+        await order.save()
+        res.redirect(`/api/ru/basket/all/${user.id}`)
+    },
+    getElementByIdRu : async (req,res)=>{
+        const user = req.session.user
+        const basket = await Basket.find({userID:user.id}).limit(3).sort({createdAt:-1}).populate('productID')
+        const result = await Product.findById(req.params.id)
+        res.render('clientru/order/order',{
+            layout:false,result,user,basket
+        })
+    },
     getAll : async (req,res)=>{
         const user = req.session.admin
         const order = await Order.find().sort({createdAt:-1}).populate(['productID', 'userID'])

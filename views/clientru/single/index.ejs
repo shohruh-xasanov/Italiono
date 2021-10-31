@@ -142,7 +142,7 @@
                     <p style="display: inline-block; padding-top: 20px; font-size: larger">В настоящее время в корзине нет данных</p>
                     <b>x</b>
                 </div>
-                <a href="/api/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Ходить по магазинам <img src="./Img/button.png" alt=""></button></a>
+                <a href="/api/ru/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Ходить по магазинам <img src="./Img/button.png" alt=""></button></a>
                 </div>
                   <% }%>
                 <%if(basket[1]) {%>
@@ -168,7 +168,7 @@
                           </div>
                           <% }%>
                           <%if(basket[0]) {%>
-                    <a href="/api/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Ходить по магазинам <img src="./Img/button.png" alt=""></button></a>
+                    <a href="/api/ru/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Ходить по магазинам <img src="./Img/button.png" alt=""></button></a>
                           <% }%>
                           <% }else{%>
                             <div class="modal_text" >
@@ -194,11 +194,11 @@
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+      <span class="visually-hidden">Предыдущий</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+      <span class="visually-hidden">Следующий</span>
     </button>
   </div>
 
@@ -211,10 +211,10 @@
                      <%- product.description.ru%>
                  </li>
                  <li>
-                     <h3><%= product.price%> so‘m <span>Izoh: Belgilangan narx m2 uchun </span></h3>
+                     <h3><%= product.price%> сумма <span>Примечание: Цена указана за м2.</span></h3>
                  </li>
                  <li>
-                    <a href="/api/basket/<%= product._id%>" style="text-decoration: none;"><button>Savatga qo‘shish</button></a> 
+                    <a href="/api/basket/<%= product._id%>" style="text-decoration: none;"><button>Добавить в корзину</button></a> 
                  </li>
              </ul>
          </div>
@@ -232,17 +232,17 @@
     <!-- START WORK -->
 
     <div class="start_work">
-        <h1>Ishni boshlaymizmi?</h1>
-        <p>Mazkur formani to’ldiring va operatorimiz siz bilan 24 soat ichida bog‘lanadi.</p>
+        <h1>Может начнем?</h1>
+        <p>Заполните эту форму, и наш оператор свяжется с вами в течение 24 часов.</p>
     </div>
     <form action="/api/contact" method="POST">
         <div class="forms">
         <div class="form_item">
-            <label for="">Ismingiz</label><br>
+            <label for="">Ваше имя</label><br>
             <input type="text" name="fullname" placeholder="Uchqun" required><br><br>
-            <label for="">Telefon raqam <span>*</span></label><br>
+            <label for="">Номер телефона <span>*</span></label><br>
             <input type="number" name="phone" placeholder="99 _ _ _" required> 
-            <button class="btn" >Jo‘natish <img src="/Img/button.png" alt=""></button>
+            <button class="btn" >Послать <img src="/Img/button.png" alt=""></button>
         </div>
         <div class="form_item kids_img">
             <img src="/Img/Cool Kids - High Tech 1.png" alt="">

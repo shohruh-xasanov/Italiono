@@ -139,7 +139,7 @@
         <div class="head_firs">
             <div class="hed_nambe">    <i class="fas fa-phone-alt"></i><a href="tel:+99871 - 123-45-67">+99871 - 123-45-67</a></div>
         
-          <div class="hed_lang" style="margin-right: -20px;">  <img src="/Img/2560px-Flag_of_Uzbekistan.svg.png" alt="bu erda rasm bor">
+          <div class="hed_lang" style="margin-right: 20px;">  <img src="/Img/2560px-Flag_of_Uzbekistan.svg.png" alt="bu erda rasm bor">
             <div class="dropdown">
                 <button class="dropbtn">Uz</button>
                 <div class="dropdown-content">
@@ -147,9 +147,9 @@
                 </div>
             </div>
             <%if(user){%>
-                <p style="padding-bottom: 30px;"> <a href="/logout" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181); padding-left: 5px;"> <i class="fas fa-door-open"></i></a></p>
+                <p style="padding-bottom: 15px;"> <a href="/logout" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181); padding-left: 5px;"> <i class="fas fa-door-open"></i></a></p>
                 <%}else{%>
-                  <p style="padding-bottom: 30px;"><a href="/api/login" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181);"><i class="fas fa-sign-out-alt" ></i></a></p>
+                  <p style="padding-bottom: 15px;"><a href="/api/login" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181);"><i class="fas fa-sign-out-alt" ></i></a></p>
                   <% }%>
             </div>
         </div>
@@ -255,11 +255,11 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="breadcrumb-content">
-                            <h2>Cart Page</h2>
+                            <h2>Страница корзины</h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="/">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                                    <li class="breadcrumb-item"><a href="/">Дом</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Корзина</li>
                                 </ol>
                             </nav>
                         </div>
@@ -268,73 +268,115 @@
             </div>
         </section>
         <!-- breadcrumb-area-end -->
-
-        <!-- cart-area -->
-        <div class="cart-area pt-100 pb-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="cart-wrapper">
-                            <div class="table-responsive">
-                                <table class="table mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th class="product-thumbnail">Photo</th>
-                                            <th class="product-name">Mahsulot</th>
-                                            <th class="product-price">Narxi</th>
-                                            <th class="product-delete" style="width: 18%;">Buyurtma qilish</th>
-                                            <th class="product-delete" style="width: 18%;">Savatdan o'chirish</th>
+ <!-- cart-area -->
+ <%if(basket[0]){%>
+    <div class="cart-area pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="cart-wrapper">
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="product-thumbnail">Фото</th>
+                                        <th class="product-name">Продукт</th>
+                                        <th class="product-price">Расходы</th>
+                                        <th class="product-delete" style="width: 18%;">Заказать</th>
+                                        <th class="product-delete" style="width: 18%;">Удалить из корзины</th>
+                                    </tr>
+                                </thead>
+                                <%for(item of basket){%>
+                                <tbody>
+                                        <tr style="align-items: center; vertical-align: middle;">
+                                            <td class="product-thumbnail"><a href="/product/<%= item.productID._id%>"><img src="<%= item.productID.poster.org%>" alt="" style="width: 100px; height: 100px;"></a></td>
+                                            <td class="product-name">
+                                                <%if(item.productID.name.ru) {%>
+                                                <h4><a href="/product/<%= item.productID._id%>"><%= item.productID.name.ru%></a></h4>
+                                                <% }else{%>
+                                                <h4><a href="/product/<%= item.productID._id%>"><%= item.productID.name.ru%></a></h4>
+                                                <% }%>
+                                            </td>
+                                            <td class="product-price"><%= item.productID.price%>Сум</td> 
+                                            <td style="
+                                            justify-content: space-around;
+                                            align-items: center;
+                                          ">
+                                            
+                                                <a  class="btn btn-danger" href="/api/order/product/<%= item.productID._id%>">Заказать<a>
+                                            </td>  
+                                            <td style="
+                                            justify-content: space-around;
+                                            align-items: center;
+                                          ">
+                                            
+                                              <a  class="btn btn-danger" href="/api/ru/basket/delete/<%= item._id%>">Удалить<a>
+                                            </td>  
                                         </tr>
-                                    </thead>
-                                    <%for(item of basket){%>
-                                    <tbody>
-                                            <tr>
-                                                <td class="product-thumbnail"><a href="/product/<%= item.productID._id%>"><img src="<%= item.productID.poster.org%>" alt="" style="width: 100px; height: 100px;"></a></td>
-                                                <td class="product-name">
-                                                    <h4><a href="/product/<%= item.productID._id%>"><%= item.productID.name.uz%></a></h4>
-                                                </td>
-                                                <td class="product-price"><%= item.productID.price%> So'm</td> 
-                                                <td style="
-                                                justify-content: space-around;
-                                                align-items: center;
-                                              ">
-                                                
-                                                    <a  class="btn btn-danger" href="/api/order/product/<%= item.productID._id%>">Buyurtma<a>
-                                                </td>  
-                                                <td style="
-                                                justify-content: space-around;
-                                                align-items: center;
-                                              ">
-                                                
-                                                  <a  class="btn btn-danger" href="/api/basket/delete/<%= item._id%>">O'chirish<a>
-                                                </td>  
-                                            </tr>
-                                        
-                                    </tbody>
-                                    <%}%>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="cart-total pt-95">
-                            <h3 class="title">CART TOTALS</h3>
-                            <div class="shop-cart-widget">
-                                <form action="#">
-                                    <ul>
-                                        <li class="sub-total"><span>UMUMIY SUMMA</span> 
-                                          
-                                    </li>
-                                        <li class="cart-total-amount"><span>MAHSULOTLAR SONI</span> <span class="amount"> ta</span></li>
-                                    </ul>
-                                    <a href="" class="btn">PROCEED TO CHECKOUT</a>
-                                </form>
-                            </div>
+                                    
+                                </tbody>
+                                <%}%>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- cart-area-end -->
+    </div>
+    <% } else{%>
+        <div style="text-align: center;">
+            <h2>В корзине нет товаров !!!</h2>
+          
+        </div>
+        <% }%>
+    <%if(order[0]){%>
 
+    <div style="text-align: center;">
+        <h2>Список заказанных товаров</h2>
+        <p>Мы свяжемся с вами в течение 3 дней после оформления заказа.</p>
+    </div>
+    <div class="cart-area pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="cart-wrapper">
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr >
+                                        <th class="product-thumbnail">Фото</th>
+                                        <th class="product-name">Продукт</th>
+                                        <th>Покупатель</th>
+                                        <th class="product-price">Расходы</th>
+                                        <th>Адрес</th>
+                                    </tr>
+                                </thead>
+                                <%for(item of order){%>
+                                <tbody >
+                                        <tr style="align-items: center; vertical-align: middle;">
+                                            <td class="product-thumbnail"><a href="/product/<%= item.productID._id%>"><img src="<%= item.productID.poster.org%>" alt="" style="width: 100px; height: 100px;"></a></td>
+                                            <td class="product-name">
+                                                <%if(item.productID.name.ru){%>
+                                                <h4><a href="/product/<%= item.productID._id%>"><%= item.productID.name.ru%></a></h4>
+                                                <% }else {%>
+                                                <h4><a href="/product/<%= item.productID._id%>"><%= item.productID.name.uz%></a></h4>
+                                                <% }%>
+                                            </td>
+                                            <td class="product-price"><%= item.productID.price%> Сум</td> 
+                                            <td><%= item.name%></td>
+                                            <td><%= item.address%></td>
+                                        </tr>
+                                    
+                                </tbody>
+                                <%}%>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% }%>
     </main>
     <!-- main-area-end -->
 
@@ -353,19 +395,19 @@
     
          <div class="footer_item">
              <div class="foot_text"> 
-                <h1>Kompaniya haqida</h1>                   
-                 <h4><i class="fas fa-envelope-open"></i> Samarqand sh., Bog‘i shamol k,. 18-uy</h4>
+                <h1>О компании</h1>                   
+                 <h4><i class="fas fa-envelope-open"></i>Самарканд, Ветряной сад 18 дом</h4>
             <h4><i class="fas fa-phone-alt"></i><a href="tel:+9987-123-45-67">+9987-123-45-67</a> </h4>
             <h4><i class="fas fa-envelope"></i><a href="https://italiano@gmail.com">italiano@gmail.com</a></h4>
               </div>
              <div class="foot_text foot_center">  
-                <h1>Ma’lumotlar</h1>             
-                <h4>Biz haqimizda</h4>
-                <h4>Aloqa</h4> 
+                <h1>Информация</h1>             
+                <h4>O нас</h4>
+                <h4>Коммуникация</h4> 
              </div> 
 
               <div class="foot_text foot_right">
-                <h1>Ijtimoiy tarmoqlar</h1>
+                <h1>Социальные сети</h1>
                 <h4><a href=""><i class="fab fa-facebook"></i> Facebook</a> </h4>
                 <h4><a href=""><i class="fab fa-instagram"></i></i> Instagram</a></h4> 
                 <h4><a href=""><i class="fab fa-telegram"></i> Telegram</a></h4>
@@ -378,14 +420,13 @@
  </footer>  
  
   <div class="foot_bottom">
-     <h3>Copyright  &copy;  2016 <span> Italiano. </span> <b> Barcha  huquqlar  himoyalangan.</b></h3>
+     <h3>Copyright  &copy;  2016 <span> Italiano. </span> <b> Все права защищены.</b></h3>
  </div> 
 
-    <script src="/index.js">
-
+<script src="/about/js/index.js">
+    
 </script>
- 
 </body>
 </html>
 
-<!-- Uchqun Turdiev -->
+<!-- Uchqun Turdiev 2021 09 05 -->

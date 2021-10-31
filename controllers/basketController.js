@@ -22,10 +22,24 @@ const basketController = {
             layout:false, basket,user,order
         })
     },
+    basketSearchRu : async(req,res)=>{
+        const {id} = req.params
+        const user = req.session.user
+        const basket = await Basket.find({userID:id}).sort({createdAt:-1}).populate('productID')
+        const order = await Order.find({userID:id}).sort({createdAt:-1}).populate('productID')
+        res.render('clientru/basket/basket', {
+            layout:false, basket,user,order
+        })
+    },
     basketDelete : async(req,res)=>{
         const user = req.session.user
         await Basket.findByIdAndDelete(req.params.id)
         res.redirect(`/api/basket/all/${user.id}`)
+    },
+    basketDeleteRu : async(req,res)=>{
+        const user = req.session.user
+        await Basket.findByIdAndDelete(req.params.id)
+        res.redirect(`/api/ru/basket/all/${user.id}`)
     }
 }
 module.exports = basketController
