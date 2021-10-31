@@ -19,14 +19,14 @@ const getUser = {
     createUserPage : async (req,res)=>{
         const lang = req.session.lang
         res.render('client/profile/reg', {
-            layout:false,lang, title:"Registratsiya"
+            layout:false,lang, title:"Registration"
         })
     },
     userFind :async (req,res)=>{
         const lang = req.session.lang
         const result = await Client.findById(req.params.id).select('-password -login -role')
         res.render('client/profile/reg',{
-            layout:false, result,lang, title:"Registratsiya"
+            layout:false, result,lang, title:"Registration"
         })
     },
     /* User update */

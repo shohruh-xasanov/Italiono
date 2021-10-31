@@ -42,6 +42,6 @@ exports.searchNewsclientru = async(req,res)=>{
     ]).populate('categoryID').limit(8)
     res.render("clientru/search/index", {
         title:search,
-        layout: false, product, search,user,basket,title:"Search"
+        layout: false, product, search,user,basket,title:"Поиск"
     });
 }

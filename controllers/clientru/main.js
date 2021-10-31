@@ -24,7 +24,7 @@ const main = {
         const product1 = await Product.find({categoryID:id1}).and({['name.ru']:{$gte:0}}).sort({createdAt:-1}).limit(8).populate('categoryID').select('-images -description ')
         const product2 = await Product.find({categoryID:id2}).and({['name.ru']:{$gte:0}}).sort({createdAt:-1}).limit(8).populate('categoryID').select('-images -description ')
         res.render('clientru/index', {
-            layout:false, collection,user, chegirma, customer, product1,product2,about,basket
+            layout:false, collection,user, chegirma, customer, product1,product2,about,basket,title:"Italiano Мебель"
         })
     },
     getAbout : async(req,res)=>{ 
@@ -37,7 +37,7 @@ const main = {
         const master = await Master.find().sort({createdAt:-1})
         const gallery = await Gallery.find().sort({createdAt:-1}).limit(4)
         res.render('clientru/about/index3',{
-            layout:false, about, master,user,basket, gallery
+            layout:false, about, master,user,basket, gallery, title:"о нас"
         })
     },
     getElementById : async(req,res)=>{
@@ -51,7 +51,7 @@ const main = {
         const result = await Product.find({categoryID:product.categoryID._id}).and({['name.ru']:{$gte:0}}).sort({createdAt:-1}).limit(8)
         const chegirma = await Chegirma.find().sort({createdAt:-1}).limit(1).populate('productID').select('-images -description ')
         res.render('clientru/single/index',{
-            layout:false, product, result,user,basket, chegirma
+            layout:false, product, result,user,basket, chegirma, title:'Продукты'
         })
     },
     getCatalog :async (req,res)=>{
@@ -97,7 +97,7 @@ const main = {
              product10 = await Product.find({categoryID:category[9]._id}).and({['name.ru']:{$gte:0}}).sort({createdAt:-1}).limit(8).select('-images -description ').populate('categoryID')
         }
         res.render('clientru/category/index2',{
-            layout:false, product1,user,basket, product2, product3,product4, product5,product6,product7,category,product8,product9,product10
+            layout:false, product1,user,basket, product2, product3,product4, product5,product6,product7,category,product8,product9,product10, title:'Каталог'
         })
     },
     getCollection : async(req,res)=>{
@@ -108,7 +108,7 @@ const main = {
         }
         const result = await Collection.findById(req.params.id).populate('productID')
         res.render('clientru/collection/index',{
-            layout:false, result,user,basket
+            layout:false, result,user,basket, title:"Коллекция"
         })
     },
     changelanguage : async (req,res,next)=>{
