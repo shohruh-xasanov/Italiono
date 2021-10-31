@@ -38,7 +38,7 @@ const getUser = {
         const {fullname,login ,password,oldpassword  } = req.body
         const user = await  User.findByIdAndUpdate(req.params.id,{fullname, login})
         if(!bcrypt.compareSync(oldpassword, user.password)){
-            return res.redirect(`/user/search/${req.params.id}`)
+            return res.redirect(`/api/user/search/${req.params.id}`)
          }
         user.password = password
         await user.save()
