@@ -4,7 +4,7 @@ const {getAll, getElementById,create,orderDelete,createRu, getElementByIdRu} = r
 router.get('/order', getAll)
 router.post('/order/create', create)
 router.post('/ru/order/create',createRu)
-router.get('/ru/order/product/:id')
+router.get('/ru/order/product/:id',getElementByIdRu)
 router.get('/order/product/:id', getElementById)
 router.delete('/order/delete/:id', orderDelete)
 
