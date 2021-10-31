@@ -96,9 +96,9 @@
                 </div>
             </div>
             <%if(user){%>
-            <p style="padding-top: 0;"><%= user.name%> <a href="/logout" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181); padding-left: 5px;"> Logout</a></p>
+            <p style="padding-top: 0;"> <a href="/logout" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181); padding-left: 5px;"> <i class="fas fa-door-open"></i></a></p>
             <%}else{%>
-              <p style="padding-top: 0;"><a href="/api/login" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181); ">Login</a></p>
+                <p style="padding-top: 0;"><a href="/api/login" style="cursor: pointer; text-decoration: underline; color: rgb(48,226,181);"><i class="fas fa-sign-out-alt" ></i></a></p>
               <% }%>
             </div>
         </div>
@@ -119,7 +119,7 @@
                     <h4><a href=""><i class="fab fa-telegram"></i></a></h4>
                 </ul>
             </ul>
-            <div class="corzina">
+            <div class="corzina" style="padding-right: 0; left: -80px;">
                 <b>x</b>
                 <form action="/ru/search" class="app-search">
                 <input name="name" type="search" placeholder="matn kiriting" autocomplete="off" />
