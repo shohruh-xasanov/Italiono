@@ -57,19 +57,20 @@ const getUser = {
           res.redirect("/reg");
         }
         await Client.findOne({email}).then((user)=>{
+            const lang = req.session.lang
             if(!user){
                     return res.render('client/profile/login',{
-                        layout:false, data:"Parol yoki login xato"
+                        layout:false, data:"Parol yoki login xato",lang
                     })
                 } user.matchPassword(password, (err, isMatch)=>{
                     if(err){
                        return res.render('client/profile/login',{
-                        layout:false, data:"Parol yoki login xato"
+                        layout:false, data:"Parol yoki login xato",lang
                     })
                     }
                     if (!isMatch) {
                        return res.render('client/profile/login',{
-                        layout:false, data:"Parol yoki login xato"
+                        layout:false, data:"Parol yoki login xato",lang
                     })
                       }else{
                           req.session.user = data={id:user._id, name:user.name}
