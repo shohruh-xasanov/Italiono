@@ -460,20 +460,13 @@ nav ul ul{
     {
         margin-left: 40px;
     }
-    .head_firs{
-        padding: 0 30px;
-    }
     .head_firs a {
         font-size: 15px;
     }
-    h1{
-        font-size: 22px;
-    }
-    #internet-item{
-        margin-top: -20px;
-    }
-    .head_firs{
-        padding: 0 30px;
+    .hed_lang
+    {
+       position: relative;;
+       right: -33px;
     }
     .fas 
     {

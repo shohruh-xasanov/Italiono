@@ -213,9 +213,14 @@
         .media_icons .fa-youtube{
             display: none;
         }
+
         .head_firs{
             padding: 0 30px;
         }
+    .bars
+    {
+        padding-left: 10px;
+    }
         .hed_lang
         {
            position: relative;;
@@ -307,7 +312,7 @@
         left: 0;
     }
 }
-
+/* 
 @media (max-width:420px){
 
     .hed_nambe a{
@@ -397,4 +402,4 @@
 }
 
 
-
+ */
