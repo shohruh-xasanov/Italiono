@@ -188,14 +188,25 @@
                 <h4><a href=""><i class="fab fa-telegram"></i></a></h4>
             </ul>
         </ul>
-        <div class="corzina">
-            <b>x</b>
-            <form action="/поиск" class="app-search">
-            <input name="name" type="search" placeholder="matn kiriting" autocomplete="off" />
-            <i class="fas fa-search"></i>
-            <button style="display: none;" type="submit"></button>
-        </form>
-        </div>
+        <%if(lang === 'ru') {%>
+            <div class="corzina">
+                <b>x</b>
+                <form action="/ru/search" class="app-search">
+                <input name="name" type="search" placeholder="matn kiriting" autocomplete="off" />
+                <i class="fas fa-search"></i>
+                <button style="display: none;" type="submit"></button>
+            </form>
+            </div>
+            <% }else{%>
+                <div class="corzina">
+                    <b>x</b>
+                    <form action="/search" class="app-search">
+                    <input name="name" type="search" placeholder="matn kiriting" autocomplete="off" />
+                    <i class="fas fa-search"></i>
+                    <button style="display: none;" type="submit"></button>
+                </form>
+                </div>
+                <% }%>
        
     </nav>
 </div>
