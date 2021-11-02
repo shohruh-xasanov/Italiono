@@ -162,12 +162,21 @@
         <div class="hed_nambe">    <i class="fas fa-phone-alt"></i><a href="tel:+99871 - 123-45-67">+99871 - 123-45-67</a></div>
     
       <div class="hed_lang">  <img src="/Img/2560px-Flag_of_Uzbekistan.svg.png" alt="bu erda rasm bor">
-        <div class="dropdown">
-            <button class="dropbtn">Uz</button>
-            <div class="dropdown-content">
-            <a href="/ru/changelang">Ru</a>
-            </div>
-        </div>    
+        <%if(lang === 'ru'){%>
+            <div class="dropdown">
+                <button class="dropbtn">Ru</button>
+                <div class="dropdown-content">
+                <a href="/changelang">Uz</a>
+                </div>
+            </div>    
+            <% }else{%>
+                <div class="dropdown">
+                    <button class="dropbtn">Uz</button>
+                    <div class="dropdown-content">
+                    <a href="/ru/changelang">Ru</a>
+                    </div>
+                </div>    
+                <% }%>
         </div>
     </div>
     <div class="navigation" style="margin-bottom: 40px;">
