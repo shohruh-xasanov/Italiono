@@ -302,6 +302,7 @@
     nav .corzina input{
         display: none;
         position: absolute;
+        width: 280px;
         top:45px;
         right: 40px ;
         z-index:1024;
@@ -367,7 +368,7 @@ nav ul ul{
         justify-content: center;
     }
     .form_item{
-        margin-left: 24%;
+        
         margin-right: 24%;
     }
     

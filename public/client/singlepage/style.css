@@ -145,10 +145,27 @@ nav ul {
     list-style: none;
     margin-left: 250px;
 }
-nav ul ul{
-    display: none;
+nav .block_item ul {
+    display: flex;
+    position: relative;
 }
+nav .block_item .fa-times{
+    width: 60px;
+    position: absolute;
+    top: -200px;
+    right: -50px;
+    opacity: 0.5;
+}
+nav .block_item ul h4 .fab{
+    font-size: 40px;
+    margin-left: 20px;
+}
+.active{
+    height: 40px;
+    position: absolute;
+    top: -10px;
 
+}
 nav ul li{
     margin-right: 50px;
 }
