@@ -358,10 +358,13 @@ nav .corzina input{
 .corzina b{
     display: none;
     position: absolute;
-    color:red;
     cursor:pointer;
     top: 20px;
-    left: -20px;
+    left: -10px;
+    opacity: 0.5;
+}
+.corzina b img{
+    width: 40px;
 }
 .modal {
     position: fixed;
@@ -409,8 +412,11 @@ nav .corzina input{
     right: 20px;
     top: 10px;
     cursor: pointer;
-    color:red;
-    font-size: 20px;
+ 
+}
+.modal_text b img{
+    width: 50px;
+    opacity: 0.5;
 }
 .modal_text p{
     margin: 0;

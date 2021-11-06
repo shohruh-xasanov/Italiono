@@ -81,6 +81,11 @@
         {
             padding-right: 50px;
         }
+        
+        .fa-times{
+            width: 60px;
+            opacity: 0.5;
+        }
         </style>
     <div class="hed">
         <header >
@@ -114,14 +119,14 @@
                 <li><a href="/about">Biz haqimizda</a></li>
                 <li><a href="#">Aloqa </a></li>
                 <ul>
-                    <i class="fas fa-times"></i>
+                    <b><img class="fa-times" src="/Img/close_black_24dp.svg" alt=""></b>
                     <h4><a href=""><i class="fab fa-facebook"></i></a> </h4>
                     <h4><a href=""><i class="fab fa-instagram"></i></i> </a></h4> 
                     <h4><a href=""><i class="fab fa-telegram"></i></a></h4>
                 </ul>
             </ul>
             <div class="corzina" style="padding-right: 0; left: -80px;">
-                <b>x</b>
+                <b><img src="/Img/close_black_24dp.svg" alt=""></b>
                 <form action="/search" class="app-search">
                 <input name="name" type="search" placeholder="matn kiriting" autocomplete="off" />
                 <i class="fas fa-search"></i>
@@ -143,7 +148,7 @@
             <div class="modal_box" >
             <img src="<%= basket[0].productID.poster.min%>" alt="">
             <div class="modal_text" >
-                <b>x</b>
+                <b><img src="/Img/close_black_24dp.svg" alt=""></b>
             <p><%= basket[0].productID.name.uz%></p>
             <h3><%= basket[0].productID.price%> so'm</h3>
             <span>new</span>
@@ -152,7 +157,7 @@
             <%} else{%> 
               <div class="modal_text" >
                 <p style="display: inline-block; padding-top: 20px; font-size: larger">Savatda hozirda malumotlar yo'q</p>
-                <b>x</b>
+                <b><img src="/Img/close_black_24dp.svg" alt=""></b>
             </div>
             <a href="/api/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Savatga o'tish <img src="./Img/button.png" alt=""></button></a>
             </div>
@@ -185,7 +190,7 @@
                       <% }else{%>
                         <div class="modal_text" >
                           <p style="display: inline-block; padding-top: 20px; font-size: larger">Siz Saytdan Ruyhatdan o'tmagansiz</p>
-                          <b>x</b>
+                          <b><img src="/Img/close_black_24dp.svg" alt=""></b>
                       </div>
                       <a href="/api/login" style="text-decoration: none;"><button>Saytga kirish <img src="/Img/button.png" alt=""></button></a>
                       <% }%>
@@ -715,7 +720,7 @@
      <h3>Copyright  &copy;  2016 <span> Italiano. </span> <b> Barcha  huquqlar  himoyalangan.</b></h3>
     </div> 
 
-<script src="./singlepage2/js/index.js"></script>
+<script src="/singlepage2/js/index.js"></script>
 </body>
 </html>
 

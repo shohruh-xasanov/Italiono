@@ -28,7 +28,7 @@ const basketController = {
         const basket = await Basket.find({userID:id}).sort({createdAt:-1}).populate('productID')
         const order = await Order.find({userID:id}).sort({createdAt:-1}).populate('productID')
         res.render('clientru/basket/basket', {
-            layout:false, basket,user,order
+            layout:false, basket,user,order,title:"Корзина"
         })
     },
     basketDelete : async(req,res)=>{

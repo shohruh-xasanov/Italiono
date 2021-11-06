@@ -5,15 +5,18 @@ window.addEventListener("DOMContentLoaded", () => {
     const bars = document.querySelector('.bars'),
     navItem = document.querySelector('ul ul'),
     nav = document.querySelector('nav ul'),
+    blockLink = document.querySelector('.block_item ul'),
     times = document.querySelector('.fa-times');
 
     bars.addEventListener('click', () => {
         navItem.classList.add("active");
         nav.style.display = 'block';
+        blockLink.style.display = 'block';
     })
     times.addEventListener('click', () =>{
         navItem.classList.remove("active");
         nav.style.display = 'none';
+        blockLink.style.display = 'none';
     })
 
     // CARUSELL..................

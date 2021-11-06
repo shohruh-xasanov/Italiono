@@ -20,6 +20,7 @@
             background: #F8F8F8;
             bottom: 20px;
         }
+    
         .btn{
             display: inline-block;
             width: 203px;
@@ -57,6 +58,18 @@
         position: relative;
         bottom: -80px
     }   
+    .italiano
+    {
+        position: relative;
+        right: 90px;
+    }
+}
+@media(max-width:400px){
+    .italiano
+    {
+        position: relative;
+        right: 60px;
+    }
 }
         
     /* Style The Dropdown Button */
@@ -110,6 +123,14 @@
       background-color: #1E2725;
       color: #fff;
     }
+    .bars
+    {
+        padding-top: 20px;
+        margin-bottom: 30px;
+    }
+    nav ul {
+        top: 70px;
+    }
     </style>
 </head>
 <body>
@@ -132,27 +153,17 @@
     <div class="containers">
     <nav>
        <div class="bars"><img src="/Img/Vector (2).svg" alt=""></div> 
-        <img class="italiano" src="/Img/ITALIANO.png" alt="">
         <ul>
+           
             <li><a href="/ru">Главная</a></li>
             <li><a href="/ru/catalog">Каталог</a></li>
             <li><a href="/ru/about">О сайте</a></li>
-            <li><a href="#">Контакты </a></li>
+            <li  class="block_item"><a href="#">Контакты </a>
             <ul>
-                <i class="fas fa-times"></i>
-                <h4><a href=""><i class="fab fa-facebook"></i></a> </h4>
-                <h4><a href=""><i class="fab fa-instagram"></i></i> </a></h4> 
-                <h4><a href=""><i class="fab fa-telegram"></i></a></h4>
-            </ul>
+              <i><img class="fa-times" src="/Img/close_black_24dp.svg" alt=""></i>
+            </ul></li>
+        </li>
         </ul>
-            <div class="corzina">
-                <b>x</b>
-                <form action="/ru/search" class="app-search">
-                <input name="name" type="search" placeholder="введите текст" autocomplete="off" />
-                <i class="fas fa-search"></i>
-                <button style="display: none;" type="submit"></button>
-            </form>
-            </div>
        
     </nav>
 </div>
@@ -174,28 +185,15 @@
     <div class="containers">
     <nav>
        <div class="bars"><img src="/Img/Vector (2).svg" alt=""></div> 
-        <img class="italiano" src="/Img/ITALIANO.png" alt="">
-        <ul>
-            <i class="fas fa-times"></i> 
-            <li><a href="/">Bosh sahifa</a></li>
-            <li><a href="/catalog">Katalog</a></li>
-            <li><a href="/about">Biz haqimizda</a></li>
-            <li><a href="#">Aloqa </a></li>
-            <ul>
-                <i class="fas fa-times"></i>
-                <h4><a href=""><i class="fab fa-facebook"></i></a> </h4>
-                <h4><a href=""><i class="fab fa-instagram"></i></i> </a></h4> 
-                <h4><a href=""><i class="fab fa-telegram"></i></a></h4>
-            </ul>
-        </ul> 
-                <div class="corzina">
-                    <b>x</b>
-                    <form action="/search" class="app-search">
-                    <input name="name" type="search" placeholder="matn kiriting" autocomplete="off" />
-                    <i class="fas fa-search"></i>
-                    <button style="display: none;" type="submit"></button>
-                </form>
-                </div>
+         <ul>
+                    <li><a href="/">Bosh sahifa</a></li>
+                    <li><a href="/catalog">Katalog</a></li>
+                    <li><a href="/about">Biz haqimizda</a></li>
+                    <li  class="block_item"><a href="#">Aloqa </a>
+                    <ul>
+                      <i><img class="fa-times" src="/Img/close_black_24dp.svg" alt=""></i>
+                    </ul></li>
+                </ul> 
        
     </nav>
 </div>
@@ -337,9 +335,8 @@
          </div> 
         <% }%>
 
- <script src="/js/script.js"></script>
-
- <script src="/js/index.js"></script>
+        <script src="/singlepage/index.js"></script>
+ 
 
 </script>
  

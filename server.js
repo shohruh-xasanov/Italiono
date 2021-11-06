@@ -52,7 +52,7 @@ app.use(express.static(path.join(__dirname + "/public/client")))
 require('./routes/routes')(app)
 
 
-
 app.listen(PORT, ()=>{
     console.log(`Server is running to ${PORT}` )
 })
+

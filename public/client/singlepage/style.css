@@ -145,10 +145,35 @@ nav ul {
     list-style: none;
     margin-left: 250px;
 }
-nav ul ul{
+nav .block_item ul {
     display: none;
-}
 
+}
+.bloc_item{
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 120px;
+}
+nav .block_item .fa-times{
+    width: 60px;
+    position: absolute;
+    top: 30px;
+    right: -20px;
+    opacity: 0.5;
+}
+nav .block_item ul li .fab{
+    font-size: 40px;
+     position: relative;
+     top: 60px;
+     left: 90%;
+}
+.active{
+    height: 40px;
+    position: absolute;
+    top: -10px;
+
+}
 nav ul li{
     margin-right: 50px;
 }
@@ -164,11 +189,20 @@ nav .corzina input{
     border:none;
     background: #F2F2F2;
     border-radius: 50px;  
-    width: 183px;
+    width: 253px;
     height: 38px;
     padding: 0 20px;
     outline: none;
-    position: relative;
+    position: absolute;
+    left: -270px;
+    top: 60px;
+}
+nav .corzina b{
+    position: absolute;
+    left: -10px;
+}
+nav .corzina b img{
+    width: 40px;
 }
 .corzina{
     display: flex;
@@ -194,7 +228,7 @@ nav .corzina input{
     border:none;
     background: #F2F2F2;
     border-radius: 50px;  
-    width: 183px;
+    width: 243px;
     height: 38px;
     padding: 0 20px;
     outline: none;
@@ -285,11 +319,13 @@ nav .corzina b{
 }
 .modal_text b{
     position: absolute;
-    right: 20px;
+    right: 10px;
     top: 10px;
     cursor: pointer;
-    color:red;
-    font-size: 20px;
+}
+.modal_text b img{
+    width: 60px;
+    opacity: 0.5;
 }
 .modal_text p{
     margin: 0;

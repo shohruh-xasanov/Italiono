@@ -47,6 +47,14 @@
           font-weight: bold;
           
         }
+        nav ul ul i img{
+            width: 60px;
+            opacity: 0.5;
+        }
+        b img{
+            width: 40px;
+            opacity: 0.5;
+        }
         
         /* Change color of dropdown links on hover */
         .dropdown-content a:hover {background-color: #f1f1f1}
@@ -98,7 +106,7 @@
             <img src="../Img/ITALIANO.png" alt=""class="italiano_img">
             <ul>
                 <ul>
-                    <i class="fas fa-times"></i>
+                    <i><img class="fa-times" src="/Img/close_black_24dp.svg" alt=""></i>
                 <li><a href="/">Bosh sahifa</a></li>
                 <li><a href="/catalog">Katalog</a></li>
                 <li><a href="/about">Biz haqimizda</a></li>
@@ -111,7 +119,7 @@
             </ul>
         </ul>
         <div class="corzina">
-            <b>x</b>
+            <b><img src="/Img/close_black_24dp.svg" alt=""></b>
             <form action="/search" class="app-search">
             <input name="name" type="search" placeholder="matn kiriting" autocomplete="off" />
             <i class="fas fa-search"></i>
@@ -169,7 +177,7 @@
               <div class="modal_box" >
               <img src="<%= basket[0].productID.poster.min%>" alt="">
               <div class="modal_text" >
-                  <b>x</b>
+                <b><img src="/Img/close_black_24dp.svg" alt=""></b>
               <p><%= basket[0].productID.name.uz%></p>
               <h3><%= basket[0].productID.price%> so'm</h3>
               <span>new</span>
@@ -178,7 +186,7 @@
               <%} else{%> 
                 <div class="modal_text" >
                   <p style="display: inline-block; padding-top: 20px; font-size: larger">Savatda hozirda malumotlar yo'q</p>
-                  <b>x</b>
+                  <b><img src="/Img/close_black_24dp.svg" alt=""></b>
               </div>
               <a href="/api/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Savatga o'tish <img src="./Img/button.png" alt=""></button></a>
               </div>
@@ -211,7 +219,7 @@
                         <% }else{%>
                           <div class="modal_text" >
                             <p style="display: inline-block; padding-top: 20px; font-size: larger">Siz Saytdan Ruyhatdan o'tmagansiz</p>
-                            <b>x</b>
+                            <b><img src="/Img/close_black_24dp.svg" alt=""></b>
                         </div>
                         <a href="/api/login" style="text-decoration: none;"><button>Saytga kirish <img src="/Img/button.png" alt=""></button></a>
                         <% }%>
@@ -240,7 +248,9 @@
         <a href="">barchasi</a>
         <div class="my_work_img">
             <div class="img_item">
+                <%if(gallery[0]) {%>
                 <img src="<%= gallery[0].image%>" alt="">
+                <% }%>
             </div>
             <div class="img_item img_item_right">
                 <div class="work_img">

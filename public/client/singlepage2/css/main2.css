@@ -160,6 +160,7 @@
     .navigation .bars{
         display: block;
         cursor: pointer;
+        margin-left: 15px;
     }
     
     nav ul{
@@ -202,6 +203,7 @@
     nav .corzina input{
         display: none;
         position: absolute;
+        width: 280px;
         top:55px;
         right: 40px ;
         z-index:1024;
@@ -237,7 +239,7 @@
     
     .bars
     {
-        padding-left: 32px;
+        padding-left: 18px;
     }
     nav .italiano
     {
@@ -331,6 +333,13 @@
 }
 }
 
+@media (max-width: 550px){
+  .modal_text p{
+      width: 80%;
+  }
+}
+
+
 @media (max-width: 450px) {
 
     .hed_nambe a{
@@ -401,4 +410,15 @@
     
     
 
+}
+
+
+
+@media (max-width: 360px){
+    nav .corzina input{
+    display: none;
+    position: absolute;
+    width: 230px;
+
+  }
 }

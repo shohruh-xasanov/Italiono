@@ -302,7 +302,8 @@
     nav .corzina input{
         display: none;
         position: absolute;
-        top:45px;
+        width: 280px;
+        top:65px;
         right: 40px ;
         z-index:1024;
     }
@@ -367,7 +368,7 @@ nav ul ul{
         justify-content: center;
     }
     .form_item{
-        margin-left: 24%;
+        
         margin-right: 24%;
     }
     
@@ -617,6 +618,20 @@ nav ul ul{
         display: none;
     }
 }
+@media (max-width: 420px){
+    .modal_text p{
+        width: 70%;
+    }
+}
+@media (max-width: 360px){
+    nav .corzina input{
+    top:65px;
+    right: 10px ;
+    width: 250px;
+
+}
+}
+
 /* 
 
 @media (max-width: 500px){

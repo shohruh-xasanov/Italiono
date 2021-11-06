@@ -124,6 +124,10 @@
         text-decoration: none;
         color: #212529;
     }
+    .bars
+    {
+        z-index: 100000;
+    }
     </style>
 </head>
 <body>
@@ -133,7 +137,7 @@
  <!-- MODALL CA -->
 
 
- <div class="hed">
+ <div class="hed" >
     <header>
        
         <div class="head_firs">
@@ -159,20 +163,23 @@
            <div class="bars"><img src="/Img/Vector (2).svg" alt=""></div> 
             <img class="italiano" src="/Img/ITALIANO.png" alt="">
             <ul>
-                <li><a href="/">Bosh sahifa</a></li>
-                <li><a href="/catalog">Katalog</a></li>
-                <li><a href="/about">Biz haqimizda</a></li>
-                <li><a href="#">Aloqa </a></li>
+                <li style="opacity: 0;"><a href="/" ></a>o</li>     
+                <li><a href="/catalog">Bosh sahifa</a></li>
+                <li><a href="/about">Katalog</a></li>
+                <li  class="block_item"><a href="#">Biz haqimizda </a>
                 <ul>
-                    <i class="fas fa-times"></i>
-                    <h4><a href=""><i class="fab fa-facebook"></i></a> </h4>
-                    <h4><a href=""><i class="fab fa-instagram"></i></i> </a></h4> 
-                    <h4><a href=""><i class="fab fa-telegram"></i></a></h4>
-                </ul>
+                  <i><img class="fa-times" src="/Img/close_black_24dp.svg" alt=""></i>
+                  <div class="bloc_item">
+                        <li><a href=""><i class="fab fa-facebook"></i></a> </>
+                    <li><a href=""><i class="fab fa-instagram"></i></i> </a></h4> 
+                    <li><a href=""><i class="fab fa-telegram"></i></a></>
+                  </div>
+                
+                </ul></li>
             </ul>
             <div class="corzina">
-                <b>x</b>
-                <form action="/search" class="app-search">
+              <b><img src="/Img/close_black_24dp.svg" alt=""></b>
+                <form action="/ru/search" class="app-search">
                 <input name="name" type="search" placeholder="matn kiriting" autocomplete="off" />
                 <i class="fas fa-search"></i>
                 <button style="display: none;" type="submit"></button>
@@ -417,12 +424,49 @@
  </div> 
 
 
- <script src="/js/script.js"></script>
-
- <script src="/js/index.js"></script>
-  
-</script>
+ <script src="/singlepage/index.js"></script>
  
+<script >
+
+    window.addEventListener("DOMContentLoaded", () => {
+    
+    input = document.querySelector('.corzina input'),
+    exitSearch = document.querySelector('.corzina b'),
+    blockItem = document.querySelector('.block_item h4'),
+    search = document.querySelector('.fa-search');
+    
+    
+    search.addEventListener('click', () =>{
+        input.style.display = 'block';
+        exitSearch.style.display = 'block';
+    })
+    exitSearch.addEventListener('click', () =>{
+        input.style.display = 'none';
+        exitSearch.style.display = 'none';
+    })
+    
+    
+    
+       // CARUSELL..................
+    
+        
+    //    MODALL............
+    
+    const modal = document.querySelector('.modal'),
+    savat = document.querySelector('.fa-shopping-bag'),
+    exit = document.querySelector('.modal_text b');
+    
+    savat.addEventListener('click', () => {
+        modal.style.display = "block";
+    })
+    exit.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+     
+      
+     
+    });
+    </script>
 </body>
 </html>
 

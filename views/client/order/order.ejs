@@ -72,7 +72,10 @@
       font-weight: bold;
       
     }
-    
+    .start_work
+    {
+      margin-top: 30px;
+    }
     /* Change color of dropdown links on hover */
     .dropdown-content a:hover {background-color: #f1f1f1}
     
@@ -136,42 +139,47 @@
            <nav>
               <div class="bars"><img src="/Img/Vector (2).svg" alt=""></div> 
                <img class="italiano" src="/Img/ITALIANO.png" alt="">
-               <ul>
-                   <li><a href="/">Bosh sahifa</a></li>
-                   <li><a href="/catalog">Katalog</a></li>
-                   <li><a href="/about">Biz haqimizda</a></li>
-                   <li><a href="#">Aloqa </a></li>
-                   <ul>
-                       <i class="fas fa-times"></i>
-                       <h4><a href=""><i class="fab fa-facebook"></i></a> </h4>
-                       <h4><a href=""><i class="fab fa-instagram"></i></i> </a></h4> 
-                       <h4><a href=""><i class="fab fa-telegram"></i></a></h4>
-                   </ul>
-               </ul>
-               <div class="corzina">
-                   <b>x</b>
-                   <form action="/search" class="app-search">
-                   <input name="name" type="search" placeholder="matn kiriting" autocomplete="off" />
-                   <i class="fas fa-search"></i>
-                   <button style="display: none;" type="submit"></button>
-               </form>
-               <i class="fas fa-shopping-bag"></i>
-               </div>
               
+               <ul>
+                <li><a href="/">Bosh sahifa</a></li>
+                <li><a href="/catalog">Katalog</a></li>
+                <li><a href="/about">Biz haqimizda</a></li>
+                <li  class="block_item"><a href="#">Aloqa </a>
+                <ul>
+                  <i><img class="fa-times" src="/Img/close_black_24dp.svg" alt=""></i>
+                  <div class="bloc_item">
+                        <li><a href=""><i class="fab fa-facebook"></i></a> 
+                    <li><a href=""><i class="fab fa-instagram"></i></i> </a></h4> 
+                    <li><a href=""><i class="fab fa-telegram"></i></a>
+                  </div>
+                
+                </ul></li>
+            </ul>
+           
+            <div class="corzina" style="opacity: 0;">
+              <b>x</b>
+              <form action="/ru/search" class="app-search">
+              <input name="name" type="search" placeholder="matn kiriting" autocomplete="off" />
+              <i class="fas fa-search"></i>
+              <button style="display: none;" type="submit"></button>
+          </form>
+          <i class="fas fa-shopping-bag"></i>
+          </div>
+         
            </nav>
        </div>
        </div>
    
        <!-- MODAL...................... -->
    
-       <div class="modal" >
+       <div class="modals" >
            <div class="modal_bottom" style="height: 450px;">
              <%if(user){%>
              <%if(basket[0]){%>
                <div class="modal_box" >
                <img src="<%= basket[0].productID.poster.min%>" alt="">
                <div class="modal_text" >
-                   <b>x</b>
+                <b><img src="/Img/close_black_24dp.svg" alt=""></b>
                <p><%= basket[0].productID.name.uz%></p>
                <h3><%= basket[0].productID.price%> so'm</h3>
                <span>new</span>
@@ -180,7 +188,7 @@
                <%} else{%> 
                  <div class="modal_text" >
                    <p style="display: inline-block; padding-top: 20px; font-size: larger">Savatda hozirda malumotlar yo'q</p>
-                   <b>x</b>
+                   <b><img src="/Img/close_black_24dp.svg" alt=""></b>
                </div>
                <a href="/api/basket/all/<%= user.id%>" style="text-decoration: none;"><button>Savatga o'tish <img src="./Img/button.png" alt=""></button></a>
                </div>
@@ -213,7 +221,7 @@
                          <% }else{%>
                            <div class="modal_text" >
                              <p style="display: inline-block; padding-top: 20px; font-size: larger">Siz Saytdan Ruyhatdan o'tmagansiz</p>
-                             <b>x</b>
+                             <b><img src="/Img/close_black_24dp.svg" alt=""></b>
                          </div>
                          <a href="/api/login" style="text-decoration: none;"><button>Saytga kirish <img src="/Img/button.png" alt=""></button></a>
                          <% }%>
@@ -298,12 +306,9 @@
   <div class="foot_bottom">
      <h3>Copyright  &copy;  2016 <span> Italiano. </span> <b> Barcha  huquqlar  himoyalangan.</b></h3>
  </div> 
- <script src="/js/script.js"></script>
+ <script src="/singlepage/index.js"></script>
 
- <script src="/js/index.js"></script>
-
-</script>
- 
+  
 </body>
 </html>
 

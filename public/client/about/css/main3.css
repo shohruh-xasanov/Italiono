@@ -116,7 +116,7 @@
         display: block;
         width: 100%;
         height: 360px;
-        background-color: #fff;
+        background-color: #fcfcfc;
         position: absolute;
         top: 150px;
         left: 0px;
@@ -186,6 +186,9 @@
     .form_item input{
     width: 70%;
     }
+    nav .corzina input{
+        width: 260px;
+    }
     .footer_item{
     top: 120px;
     }
@@ -205,6 +208,7 @@
         left: 0;
         margin: 10px;
     }
+
 }
 
 

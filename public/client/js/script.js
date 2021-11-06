@@ -8,15 +8,18 @@ window.addEventListener("DOMContentLoaded", () => {
     main = document.querySelector('main');
     input = document.querySelector('.corzina input'),
     exitSearch = document.querySelector('.corzina b'),
+    blockItem = document.querySelector('.block_item h4'),
     search = document.querySelector('.fa-search');
 
     bars.addEventListener('click', () => {
         navItem.classList.add("active");
         main.classList.add("main_none");
+        blockItem.style.display = 'block';
     })
     times.addEventListener('click', () =>{
         navItem.classList.remove("active"),
         main.classList.remove("main_none");
+        blockItem.style.display = 'none';
     })
 
     
