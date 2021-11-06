@@ -9,12 +9,12 @@ window.addEventListener("DOMContentLoaded", () => {
     times = document.querySelector('.fa-times');
 
     bars.addEventListener('click', () => {
-        navItem.classList.add("active");
+        navItem.classList.add("actives");
         nav.style.display = 'block';
         blockLink.style.display = 'block';
     })
     times.addEventListener('click', () =>{
-        navItem.classList.remove("active");
+        navItem.classList.remove("actives");
         nav.style.display = 'none';
         blockLink.style.display = 'none';
     })
