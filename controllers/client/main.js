@@ -69,6 +69,16 @@ const main = {
         let product8 = []
         let product9 = []
         let product10 = []
+        let product11 = []
+        let product12 = []
+        let product13 = []
+        let product14 = []
+        let product15 = []
+        let product16 = []
+        let product17 = []
+        let product18 = []
+        let product19 = []
+        let product20 = []
         if(category[2]){
              product3 = await Product.find({categoryID:category[2]._id}).and({['name.uz']:{$gte:0}}).sort({createdAt:-1}).limit(8).select('-images -description ').populate('categoryID')
         }else{
@@ -94,8 +104,39 @@ const main = {
         if(category[9]){
              product10 = await Product.find({categoryID:category[9]._id}).and({['name.uz']:{$gte:0}}).sort({createdAt:-1}).limit(8).select('-images -description ').populate('categoryID')
         }
+        if(category[10]){
+             product11 = await Product.find({categoryID:category[10]._id}).and({['name.uz']:{$gte:0}}).sort({createdAt:-1}).limit(8).select('-images -description ').populate('categoryID')
+        }
+        if(category[11]){
+             product12 = await Product.find({categoryID:category[11]._id}).and({['name.uz']:{$gte:0}}).sort({createdAt:-1}).limit(8).select('-images -description ').populate('categoryID')
+        }
+        if(category[12]){
+             product13 = await Product.find({categoryID:category[12]._id}).and({['name.uz']:{$gte:0}}).sort({createdAt:-1}).limit(8).select('-images -description ').populate('categoryID')
+        }
+        if(category[13]){
+             product14 = await Product.find({categoryID:category[13]._id}).and({['name.uz']:{$gte:0}}).sort({createdAt:-1}).limit(8).select('-images -description ').populate('categoryID')
+        }
+        if(category[14]){
+             product15 = await Product.find({categoryID:category[14]._id}).and({['name.uz']:{$gte:0}}).sort({createdAt:-1}).limit(8).select('-images -description ').populate('categoryID')
+        }
+        if(category[15]){
+             product16 = await Product.find({categoryID:category[15]._id}).and({['name.uz']:{$gte:0}}).sort({createdAt:-1}).limit(8).select('-images -description ').populate('categoryID')
+        }
+        if(category[16]){
+             product17 = await Product.find({categoryID:category[16]._id}).and({['name.uz']:{$gte:0}}).sort({createdAt:-1}).limit(8).select('-images -description ').populate('categoryID')
+        }
+        if(category[17]){
+             product18 = await Product.find({categoryID:category[17]._id}).and({['name.uz']:{$gte:0}}).sort({createdAt:-1}).limit(8).select('-images -description ').populate('categoryID')
+        }
+        if(category[18]){
+             product19 = await Product.find({categoryID:category[18]._id}).and({['name.uz']:{$gte:0}}).sort({createdAt:-1}).limit(8).select('-images -description ').populate('categoryID')
+        }
+        if(category[19]){
+             product20 = await Product.find({categoryID:category[19]._id}).and({['name.uz']:{$gte:0}}).sort({createdAt:-1}).limit(8).select('-images -description ').populate('categoryID')
+        }
         res.render('client/category/index2',{
-            layout:false, product1,user,basket, product2, product3,product4, product5,product6,product7,category,product8,product9,product10, title:'Katalog'
+            layout:false, product1,user,basket, product2, product3,product4, product5,product6,product7,category,product8,product9,product10,
+            product11,product12,product13,product14,product15,product16,product17,product18,product19,product20, title:'Katalog'
         })
     },
     getCollection : async(req,res)=>{ const user = req.session.user

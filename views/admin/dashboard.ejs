@@ -38,6 +38,7 @@
                         </thead>
                         <tbody>
                             <%for(item of users) {%>
+                                <%if(!item._id === user.id){%>
                             <tr>
                                 <td>
                                     <%= item.fullname%>
@@ -58,6 +59,7 @@
                                 </div>
                                 </td>
                             </tr>
+                            <% }%>
                             <% }%>
                         </tbody>
                     </table>

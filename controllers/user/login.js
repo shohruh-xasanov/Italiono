@@ -4,7 +4,7 @@ exports.login = async (req,res,next)=>{
     try {
         const {login, password} = req.body
     if (!login && !password) {
-      res.redirect("/api/auth/login");
+      res.redirect("/login");
     }
     await User.findOne({login}).then((user)=>{
         if(!user){
@@ -29,7 +29,7 @@ exports.login = async (req,res,next)=>{
             });
     })
     } catch (error) {
-        res.redirect('/api/auth/login')
+        res.redirect('/login')
     }
 }
 

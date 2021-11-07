@@ -7,6 +7,7 @@
     <title><%= title%></title>
     <link rel="stylesheet" href="/singlepage2/css/style2.css">
     <link rel="stylesheet" href="/singlepage2/css/main2.css">
+    <link type="image/x-icon" href="/Img/ITALIANO.png" rel="shortcut icon">
     <meta name="description" content="Italiano.uz Mebel kompaniyasi butun O‘zbekistondagi omborxonalarda yumshoq va shkaf mebellarini sotish bo‘yicha yetakchi hisoblanadi. Biz Toshkent va butun O'zbekiston bo'ylab mebel yetkazib beramiz. Bizning holatlarimizda siz to'plamga buyurtma berishingiz, mebelni polga ko'tarishingiz mumkin. Kafolat va kafolatdan keyingi xizmat Yetkazib berish va toʻlov boʻlimida batafsil yoritilgan. ">
     <style>
         .action a 
@@ -92,7 +93,7 @@
            
          
         <div class="head_firs">
-            <div class="hed_nambe">    <i class="fas fa-phone-alt"></i><a href="tel:+99871 - 123-45-67">+99871 - 123-45-67</a></div>
+            <div class="hed_nambe">    <i class="fas fa-phone-alt"></i><a href="tel: +998970120404">+998 97 - 012-04-04</a></div>
         
           <div class="hed_lang" style="margin-right: -20px;">  <img src="/Img/2560px-Flag_of_Uzbekistan.svg.png" alt="bu erda rasm bor">
             <div class="dropdown">
@@ -120,9 +121,9 @@
                 <li><a href="#">Aloqa </a></li>
                 <ul>
                     <b><img class="fa-times" src="/Img/close_black_24dp.svg" alt=""></b>
-                    <h4><a href=""><i class="fab fa-facebook"></i></a> </h4>
-                    <h4><a href=""><i class="fab fa-instagram"></i></i> </a></h4> 
-                    <h4><a href=""><i class="fab fa-telegram"></i></a></h4>
+                    <h4><a href="#"><i class="fab fa-facebook"></i></a> </h4>
+                    <h4><a href="https://instagram.com/italiano_samarkand?utm_medium=copy_link"><i class="fab fa-instagram"></i></i> </a></h4> 
+                    <h4><a href="https://t.me/italiano_samarkand"><i class="fab fa-telegram"></i></a></h4>
                 </ul>
             </ul>
             <div class="corzina" style="padding-right: 0; left: -80px;">
@@ -655,6 +656,446 @@
                                 
                                 </div>
                                 <% }%>
+                                <%if(product11[0]) {%>
+                                    <div id="magazin">
+                                        <div class="links">
+                                            <div class="link">
+                                            <h3><%=product11[0].categoryID.name.uz%></h3>
+                                            <p>Furniture design</p>
+                                        </div>
+                                    <div id="internet-item"> 
+                                       
+                                    <div class="container">
+                                       <%for(item of product11) {%>
+                                        <div class="card">
+                                            <div class="imgBx">
+                                                <a href="/product/<%= item._id%>" style="cursor: pointer;"><img src="<%= item.poster.min%>" alt=""></a>
+                                                <ul class="action">
+                                                    <li><i class="fas fa-share-alt"></i><span>Add to Wishlist</span></li>      
+                                                    <a href="/api/basket/<%=item._id%>"> <li> <i class="fas fa-cart-arrow-down"></i><span>Add to Cart</span></li></a>
+                                                    <a href="/product/<%= item._id%>" ><li><i class="fas fa-eye"></i><span>Viev Detalis</span></li></a>
+                                                 
+                                                </ul>
+                                            </div>
+                                            <div class="content">
+                                                <div class="proName">
+                                                   <a href="/product/<%= item._id%>" style="cursor: pointer; color: #8D8D8D; text-decoration: none;"> <h3><%= item.name.uz%> </h3></a>
+                                                </div>
+                                                <div class="priceReating">
+                                                    <h2><a href="/product/<%= item._id%>" style="cursor: pointer; color: rgb(30,39,37);text-decoration: none;"><%= item.price%> so‘m </a></h2>
+                                                    <div class="raiting">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star gray"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <% }%>
+                                    </div>
+                                    
+                                    </div>
+                                    
+                                    </div>
+                                    <% }%>
+                                    <%if(product12[0]) {%>
+                                        <div id="magazin">
+                                            <div class="links">
+                                                <div class="link">
+                                                <h3><%=product12[0].categoryID.name.uz%></h3>
+                                                <p>Furniture design</p>
+                                            </div>
+                                        <div id="internet-item"> 
+                                           
+                                        <div class="container">
+                                           <%for(item of product12) {%>
+                                            <div class="card">
+                                                <div class="imgBx">
+                                                    <a href="/product/<%= item._id%>" style="cursor: pointer;"><img src="<%= item.poster.min%>" alt=""></a>
+                                                    <ul class="action">
+                                                        <li><i class="fas fa-share-alt"></i><span>Add to Wishlist</span></li>      
+                                                        <a href="/api/basket/<%=item._id%>"> <li> <i class="fas fa-cart-arrow-down"></i><span>Add to Cart</span></li></a>
+                                                        <a href="/product/<%= item._id%>" ><li><i class="fas fa-eye"></i><span>Viev Detalis</span></li></a>
+                                                     
+                                                    </ul>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="proName">
+                                                       <a href="/product/<%= item._id%>" style="cursor: pointer; color: #8D8D8D; text-decoration: none;"> <h3><%= item.name.uz%> </h3></a>
+                                                    </div>
+                                                    <div class="priceReating">
+                                                        <h2><a href="/product/<%= item._id%>" style="cursor: pointer; color: rgb(30,39,37);text-decoration: none;"><%= item.price%> so‘m </a></h2>
+                                                        <div class="raiting">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star gray"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <% }%>
+                                        </div>
+                                        
+                                        </div>
+                                        
+                                        </div>
+                                        <% }%>
+                                        <%if(product13[0]) {%>
+                                            <div id="magazin">
+                                                <div class="links">
+                                                    <div class="link">
+                                                    <h3><%=product13[0].categoryID.name.uz%></h3>
+                                                    <p>Furniture design</p>
+                                                </div>
+                                            <div id="internet-item"> 
+                                               
+                                            <div class="container">
+                                               <%for(item of product13) {%>
+                                                <div class="card">
+                                                    <div class="imgBx">
+                                                        <a href="/product/<%= item._id%>" style="cursor: pointer;"><img src="<%= item.poster.min%>" alt=""></a>
+                                                        <ul class="action">
+                                                            <li><i class="fas fa-share-alt"></i><span>Add to Wishlist</span></li>      
+                                                            <a href="/api/basket/<%=item._id%>"> <li> <i class="fas fa-cart-arrow-down"></i><span>Add to Cart</span></li></a>
+                                                            <a href="/product/<%= item._id%>" ><li><i class="fas fa-eye"></i><span>Viev Detalis</span></li></a>
+                                                         
+                                                        </ul>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="proName">
+                                                           <a href="/product/<%= item._id%>" style="cursor: pointer; color: #8D8D8D; text-decoration: none;"> <h3><%= item.name.uz%> </h3></a>
+                                                        </div>
+                                                        <div class="priceReating">
+                                                            <h2><a href="/product/<%= item._id%>" style="cursor: pointer; color: rgb(30,39,37);text-decoration: none;"><%= item.price%> so‘m </a></h2>
+                                                            <div class="raiting">
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star gray"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <% }%>
+                                            </div>
+                                            
+                                            </div>
+                                            
+                                            </div>
+                                            <% }%>
+                                            <%if(product14[0]) {%>
+                                                <div id="magazin">
+                                                    <div class="links">
+                                                        <div class="link">
+                                                        <h3><%=product14[0].categoryID.name.uz%></h3>
+                                                        <p>Furniture design</p>
+                                                    </div>
+                                                <div id="internet-item"> 
+                                                   
+                                                <div class="container">
+                                                   <%for(item of product14) {%>
+                                                    <div class="card">
+                                                        <div class="imgBx">
+                                                            <a href="/product/<%= item._id%>" style="cursor: pointer;"><img src="<%= item.poster.min%>" alt=""></a>
+                                                            <ul class="action">
+                                                                <li><i class="fas fa-share-alt"></i><span>Add to Wishlist</span></li>      
+                                                                <a href="/api/basket/<%=item._id%>"> <li> <i class="fas fa-cart-arrow-down"></i><span>Add to Cart</span></li></a>
+                                                                <a href="/product/<%= item._id%>" ><li><i class="fas fa-eye"></i><span>Viev Detalis</span></li></a>
+                                                             
+                                                            </ul>
+                                                        </div>
+                                                        <div class="content">
+                                                            <div class="proName">
+                                                               <a href="/product/<%= item._id%>" style="cursor: pointer; color: #8D8D8D; text-decoration: none;"> <h3><%= item.name.uz%> </h3></a>
+                                                            </div>
+                                                            <div class="priceReating">
+                                                                <h2><a href="/product/<%= item._id%>" style="cursor: pointer; color: rgb(30,39,37);text-decoration: none;"><%= item.price%> so‘m </a></h2>
+                                                                <div class="raiting">
+                                                                    <i class="fas fa-star"></i>
+                                                                    <i class="fas fa-star"></i>
+                                                                    <i class="fas fa-star"></i>
+                                                                    <i class="fas fa-star"></i>
+                                                                    <i class="fas fa-star gray"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <% }%>
+                                                </div>
+                                                
+                                                </div>
+                                                
+                                                </div>
+                                                <% }%>
+                                                <%if(product15[0]) {%>
+                                                    <div id="magazin">
+                                                        <div class="links">
+                                                            <div class="link">
+                                                            <h3><%=product15[0].categoryID.name.uz%></h3>
+                                                            <p>Furniture design</p>
+                                                        </div>
+                                                    <div id="internet-item"> 
+                                                       
+                                                    <div class="container">
+                                                       <%for(item of product15) {%>
+                                                        <div class="card">
+                                                            <div class="imgBx">
+                                                                <a href="/product/<%= item._id%>" style="cursor: pointer;"><img src="<%= item.poster.min%>" alt=""></a>
+                                                                <ul class="action">
+                                                                    <li><i class="fas fa-share-alt"></i><span>Add to Wishlist</span></li>      
+                                                                    <a href="/api/basket/<%=item._id%>"> <li> <i class="fas fa-cart-arrow-down"></i><span>Add to Cart</span></li></a>
+                                                                    <a href="/product/<%= item._id%>" ><li><i class="fas fa-eye"></i><span>Viev Detalis</span></li></a>
+                                                                 
+                                                                </ul>
+                                                            </div>
+                                                            <div class="content">
+                                                                <div class="proName">
+                                                                   <a href="/product/<%= item._id%>" style="cursor: pointer; color: #8D8D8D; text-decoration: none;"> <h3><%= item.name.uz%> </h3></a>
+                                                                </div>
+                                                                <div class="priceReating">
+                                                                    <h2><a href="/product/<%= item._id%>" style="cursor: pointer; color: rgb(30,39,37);text-decoration: none;"><%= item.price%> so‘m </a></h2>
+                                                                    <div class="raiting">
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star"></i>
+                                                                        <i class="fas fa-star gray"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <% }%>
+                                                    </div>
+                                                    
+                                                    </div>
+                                                    
+                                                    </div>
+                                                    <% }%>
+                                                    <%if(product16[0]) {%>
+                                                        <div id="magazin">
+                                                            <div class="links">
+                                                                <div class="link">
+                                                                <h3><%=product16[0].categoryID.name.uz%></h3>
+                                                                <p>Furniture design</p>
+                                                            </div>
+                                                        <div id="internet-item"> 
+                                                           
+                                                        <div class="container">
+                                                           <%for(item of product16) {%>
+                                                            <div class="card">
+                                                                <div class="imgBx">
+                                                                    <a href="/product/<%= item._id%>" style="cursor: pointer;"><img src="<%= item.poster.min%>" alt=""></a>
+                                                                    <ul class="action">
+                                                                        <li><i class="fas fa-share-alt"></i><span>Add to Wishlist</span></li>      
+                                                                        <a href="/api/basket/<%=item._id%>"> <li> <i class="fas fa-cart-arrow-down"></i><span>Add to Cart</span></li></a>
+                                                                        <a href="/product/<%= item._id%>" ><li><i class="fas fa-eye"></i><span>Viev Detalis</span></li></a>
+                                                                     
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="content">
+                                                                    <div class="proName">
+                                                                       <a href="/product/<%= item._id%>" style="cursor: pointer; color: #8D8D8D; text-decoration: none;"> <h3><%= item.name.uz%> </h3></a>
+                                                                    </div>
+                                                                    <div class="priceReating">
+                                                                        <h2><a href="/product/<%= item._id%>" style="cursor: pointer; color: rgb(30,39,37);text-decoration: none;"><%= item.price%> so‘m </a></h2>
+                                                                        <div class="raiting">
+                                                                            <i class="fas fa-star"></i>
+                                                                            <i class="fas fa-star"></i>
+                                                                            <i class="fas fa-star"></i>
+                                                                            <i class="fas fa-star"></i>
+                                                                            <i class="fas fa-star gray"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <% }%>
+                                                        </div>
+                                                        
+                                                        </div>
+                                                        
+                                                        </div>
+                                                        <% }%>
+                                                        <%if(product17[0]) {%>
+                                                            <div id="magazin">
+                                                                <div class="links">
+                                                                    <div class="link">
+                                                                    <h3><%=product17[0].categoryID.name.uz%></h3>
+                                                                    <p>Furniture design</p>
+                                                                </div>
+                                                            <div id="internet-item"> 
+                                                               
+                                                            <div class="container">
+                                                               <%for(item of product17) {%>
+                                                                <div class="card">
+                                                                    <div class="imgBx">
+                                                                        <a href="/product/<%= item._id%>" style="cursor: pointer;"><img src="<%= item.poster.min%>" alt=""></a>
+                                                                        <ul class="action">
+                                                                            <li><i class="fas fa-share-alt"></i><span>Add to Wishlist</span></li>      
+                                                                            <a href="/api/basket/<%=item._id%>"> <li> <i class="fas fa-cart-arrow-down"></i><span>Add to Cart</span></li></a>
+                                                                            <a href="/product/<%= item._id%>" ><li><i class="fas fa-eye"></i><span>Viev Detalis</span></li></a>
+                                                                         
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="content">
+                                                                        <div class="proName">
+                                                                           <a href="/product/<%= item._id%>" style="cursor: pointer; color: #8D8D8D; text-decoration: none;"> <h3><%= item.name.uz%> </h3></a>
+                                                                        </div>
+                                                                        <div class="priceReating">
+                                                                            <h2><a href="/product/<%= item._id%>" style="cursor: pointer; color: rgb(30,39,37);text-decoration: none;"><%= item.price%> so‘m </a></h2>
+                                                                            <div class="raiting">
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star"></i>
+                                                                                <i class="fas fa-star gray"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <% }%>
+                                                            </div>
+                                                            
+                                                            </div>
+                                                            
+                                                            </div>
+                                                            <% }%>
+                                                            <%if(product18[0]) {%>
+                                                                <div id="magazin">
+                                                                    <div class="links">
+                                                                        <div class="link">
+                                                                        <h3><%=product18[0].categoryID.name.uz%></h3>
+                                                                        <p>Furniture design</p>
+                                                                    </div>
+                                                                <div id="internet-item"> 
+                                                                   
+                                                                <div class="container">
+                                                                   <%for(item of product18) {%>
+                                                                    <div class="card">
+                                                                        <div class="imgBx">
+                                                                            <a href="/product/<%= item._id%>" style="cursor: pointer;"><img src="<%= item.poster.min%>" alt=""></a>
+                                                                            <ul class="action">
+                                                                                <li><i class="fas fa-share-alt"></i><span>Add to Wishlist</span></li>      
+                                                                                <a href="/api/basket/<%=item._id%>"> <li> <i class="fas fa-cart-arrow-down"></i><span>Add to Cart</span></li></a>
+                                                                                <a href="/product/<%= item._id%>" ><li><i class="fas fa-eye"></i><span>Viev Detalis</span></li></a>
+                                                                             
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="content">
+                                                                            <div class="proName">
+                                                                               <a href="/product/<%= item._id%>" style="cursor: pointer; color: #8D8D8D; text-decoration: none;"> <h3><%= item.name.uz%> </h3></a>
+                                                                            </div>
+                                                                            <div class="priceReating">
+                                                                                <h2><a href="/product/<%= item._id%>" style="cursor: pointer; color: rgb(30,39,37);text-decoration: none;"><%= item.price%> so‘m </a></h2>
+                                                                                <div class="raiting">
+                                                                                    <i class="fas fa-star"></i>
+                                                                                    <i class="fas fa-star"></i>
+                                                                                    <i class="fas fa-star"></i>
+                                                                                    <i class="fas fa-star"></i>
+                                                                                    <i class="fas fa-star gray"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <% }%>
+                                                                </div>
+                                                                
+                                                                </div>
+                                                                
+                                                                </div>
+                                                                <% }%>
+                                                                <%if(product19[0]) {%>
+                                                                    <div id="magazin">
+                                                                        <div class="links">
+                                                                            <div class="link">
+                                                                            <h3><%=product19[0].categoryID.name.uz%></h3>
+                                                                            <p>Furniture design</p>
+                                                                        </div>
+                                                                    <div id="internet-item"> 
+                                                                       
+                                                                    <div class="container">
+                                                                       <%for(item of product19) {%>
+                                                                        <div class="card">
+                                                                            <div class="imgBx">
+                                                                                <a href="/product/<%= item._id%>" style="cursor: pointer;"><img src="<%= item.poster.min%>" alt=""></a>
+                                                                                <ul class="action">
+                                                                                    <li><i class="fas fa-share-alt"></i><span>Add to Wishlist</span></li>      
+                                                                                    <a href="/api/basket/<%=item._id%>"> <li> <i class="fas fa-cart-arrow-down"></i><span>Add to Cart</span></li></a>
+                                                                                    <a href="/product/<%= item._id%>" ><li><i class="fas fa-eye"></i><span>Viev Detalis</span></li></a>
+                                                                                 
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="content">
+                                                                                <div class="proName">
+                                                                                   <a href="/product/<%= item._id%>" style="cursor: pointer; color: #8D8D8D; text-decoration: none;"> <h3><%= item.name.uz%> </h3></a>
+                                                                                </div>
+                                                                                <div class="priceReating">
+                                                                                    <h2><a href="/product/<%= item._id%>" style="cursor: pointer; color: rgb(30,39,37);text-decoration: none;"><%= item.price%> so‘m </a></h2>
+                                                                                    <div class="raiting">
+                                                                                        <i class="fas fa-star"></i>
+                                                                                        <i class="fas fa-star"></i>
+                                                                                        <i class="fas fa-star"></i>
+                                                                                        <i class="fas fa-star"></i>
+                                                                                        <i class="fas fa-star gray"></i>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <% }%>
+                                                                    </div>
+                                                                    
+                                                                    </div>
+                                                                    
+                                                                    </div>
+                                                                    <% }%>
+                                                                    <%if(product20[0]) {%>
+                                                                        <div id="magazin">
+                                                                            <div class="links">
+                                                                                <div class="link">
+                                                                                <h3><%=product20[0].categoryID.name.uz%></h3>
+                                                                                <p>Furniture design</p>
+                                                                            </div>
+                                                                        <div id="internet-item"> 
+                                                                           
+                                                                        <div class="container">
+                                                                           <%for(item of product20) {%>
+                                                                            <div class="card">
+                                                                                <div class="imgBx">
+                                                                                    <a href="/product/<%= item._id%>" style="cursor: pointer;"><img src="<%= item.poster.min%>" alt=""></a>
+                                                                                    <ul class="action">
+                                                                                        <li><i class="fas fa-share-alt"></i><span>Add to Wishlist</span></li>      
+                                                                                        <a href="/api/basket/<%=item._id%>"> <li> <i class="fas fa-cart-arrow-down"></i><span>Add to Cart</span></li></a>
+                                                                                        <a href="/product/<%= item._id%>" ><li><i class="fas fa-eye"></i><span>Viev Detalis</span></li></a>
+                                                                                     
+                                                                                    </ul>
+                                                                                </div>
+                                                                                <div class="content">
+                                                                                    <div class="proName">
+                                                                                       <a href="/product/<%= item._id%>" style="cursor: pointer; color: #8D8D8D; text-decoration: none;"> <h3><%= item.name.uz%> </h3></a>
+                                                                                    </div>
+                                                                                    <div class="priceReating">
+                                                                                        <h2><a href="/product/<%= item._id%>" style="cursor: pointer; color: rgb(30,39,37);text-decoration: none;"><%= item.price%> so‘m </a></h2>
+                                                                                        <div class="raiting">
+                                                                                            <i class="fas fa-star"></i>
+                                                                                            <i class="fas fa-star"></i>
+                                                                                            <i class="fas fa-star"></i>
+                                                                                            <i class="fas fa-star"></i>
+                                                                                            <i class="fas fa-star gray"></i>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <% }%>
+                                                                        </div>
+                                                                        
+                                                                        </div>
+                                                                        
+                                                                        </div>
+                                                                        <% }%>
 <div class="start_work">
     <h1>Ishni boshlaymizmi?</h1>
     <p>Mazkur formani to’ldiring va operatorimiz siz bilan 24 soat ichida bog‘lanadi.</p>
@@ -694,7 +1135,7 @@
              <div class="foot_text"> 
                 <h1>Kompaniya haqida</h1>                   
                  <h4><i class="fas fa-envelope-open"></i> Samarqand sh., Bog‘i shamol k,. 18-uy</h4>
-            <h4><i class="fas fa-phone-alt"></i><a href="tel:+9987-123-45-67">+9987-123-45-67</a> </h4>
+            <h4><i class="fas fa-phone-alt"></i><a href="tel: +998970120404">+998 97 - 012-04-04</a> </h4>
             <h4><i class="fas fa-envelope"></i><a href="https://italiano@gmail.com">italiano@gmail.com</a></h4>
               </div>
              <div class="foot_text foot_center">  
@@ -705,9 +1146,9 @@
     
               <div class="foot_text foot_right">
                 <h1>Ijtimoiy tarmoqlar</h1>
-                <h4><a href=""><i class="fab fa-facebook"></i> Facebook</a> </h4>
-                <h4><a href=""><i class="fab fa-instagram"></i></i> Instagram</a></h4> 
-                <h4><a href=""><i class="fab fa-telegram"></i> Telegram</a></h4>
+                <h4><a href="#"><i class="fab fa-facebook"></i> Facebook</a> </h4>
+                <h4><a href="https://instagram.com/italiano_samarkand?utm_medium=copy_link"><i class="fab fa-instagram"></i></i> Instagram</a></h4> 
+                <h4><a href="https://t.me/italiano_samarkand"><i class="fab fa-telegram"></i> Telegram</a></h4>
              </div>
          </div>
         
